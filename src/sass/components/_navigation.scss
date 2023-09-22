@@ -1,0 +1,120 @@
+@use "../variables" as v;
+@use "../library/sumbiot/general/mixins" as m;
+
+.navigation{
+
+}
+
+.navigation__burger{
+  width: 40px;
+  height: 35px;
+}
+
+.navigation__inner{
+  display: none;
+
+  position: fixed;
+  left: 0;
+  top: 60px;
+  z-index: 100;
+
+  width: 100%;
+  height: calc(100% - 60px);
+
+  overflow-y: auto;
+
+  background-color: #F4F5F8;
+
+  @include m.media('lg') {
+    // Кнопки боковые
+    &::-webkit-scrollbar-button {
+      width: 5px;
+      height: 0;
+    }
+
+    // Цвет дорожки, по которой двигается бегунок прокрутки.
+    &::-webkit-scrollbar-track {
+      background-color: rgba(0,0,0,0.05);
+      border-radius: 5px;
+    }
+
+    // Цвет бегунка полосы, а так же его закругление.
+    &::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background-color: rgba(0,0,0,0.1);
+    }
+
+    // Основная ширина полосы прокрутки.
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+  }
+
+}
+
+.navigation__menu-inner{
+  margin: 0 0 30px 0;
+  padding: 30px 0 0 0;
+
+  @include m.media('md') {
+    padding: 60px 0 0 0;
+  }
+
+  @include m.media('lg') {
+    padding: 90px 0 0 0;
+  }
+
+  @include m.media('lg') {
+    padding: 150px 0 0 0;
+  }
+}
+
+.navigation__title{
+  margin: 0 0 20px 0;
+
+  @include m.media('md') {
+    font-size: 28px;
+
+    margin-bottom: 40px;
+  }
+
+  @include m.media('lg') {
+    margin-bottom: 70px;
+  }
+
+  @include m.media('xl') {
+    margin-bottom: 90px;
+  }
+}
+
+.navigation__menu{
+  padding-left: 8px;
+
+  @include m.media('md') {
+    padding-left: 0;
+  }
+}
+
+.navigation__contacts-inner{
+  padding: 30px 0 0 0;
+
+  @include m.media('md') {
+    padding: 60px 0 0 0;
+  }
+
+  @include m.media('lg') {
+    padding: 90px 0 0 0;
+  }
+
+  @include m.media('lg') {
+    padding: 150px 0 0 0;
+  }
+}
+
+.navigation__contacts{
+  padding-left: 10px;
+
+  @include m.media('md') {
+    padding-left: 0;
+  }
+}

@@ -1,0 +1,210 @@
+<!doctype html>
+
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Регистрация</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="author" content="Abraklion">
+  <meta name="description" content="Описания регистрации">
+
+  <link rel="stylesheet" href="assets/css/style.min.css">
+
+  <script defer src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+  <script defer src="js/runtime.js"></script>
+  <script defer src="js/validation.js"></script>
+  <script defer src="js/main.js"></script>
+  <script defer src="js/reg.js"></script>
+</head>
+
+<body class="page__body">
+
+  <header class="header">
+    <div class="sContainer">
+
+      <div class="header__inner">
+
+        <a href="" class="header__logo logo">
+          <picture>
+            <source media="(min-width: 992px)" srcset="assets/img/logo-desktop.svg" type="image/svg+xml">
+            <img class="logo__img" src="assets/img/logo-mobile.svg" width="36" height="21" alt="Логотип MED.PROGRESS">
+          </picture>
+        </a><!--/.logo-->
+
+        <a class="header__phone" href="tel:+79991234567">+7 (999) 123 45 67</a>
+
+        <nav class="header__navigation navigation">
+
+          <button class="navigation__burger burger js-burger" data-sumbiot-target=".js-menu" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button><!--/.burger-->
+
+          <div class="navigation__inner js-menu" data-sumbiot-modal>
+
+            <div class="sContainer">
+
+              <div class="sRow">
+
+                <div class="sCol-md-6">
+
+                  <div class="navigation__menu-inner">
+
+                    <h2 class="navigation__title title">Меню</h2>
+
+                    <ul class="navigation__menu menu">
+                      <li class="menu__item">
+                        <a href="" class="menu__link">Главная</a>
+                      </li>
+                      <li class="menu__item">
+                        <a href="" class="menu__link">Сервисы</a>
+                      </li>
+                      <li class="menu__item">
+                        <a href="" class="menu__link">О нас</a>
+                      </li>
+                    </ul><!--/.menu-->
+
+                  </div>
+
+                </div>
+
+                <div class="sCol-md-6">
+
+                  <address class="navigation__contacts-inner">
+
+                    <h2 class="navigation__title title">Контакты</h2>
+
+                    <ul class="navigation__contacts contacts">
+                      <li class="contacts__item contacts__item--mail">
+                        <a class="contacts__link" href="mailto:info@circleschool.ru">info@circleschool.ru</a>
+                      </li>
+                      <li class="contacts__item contacts__item--phone">
+                        <a class="contacts__link" href="tel:+79991234567">+7 (999) 123 45 67</a>
+                      </li>
+                      <li class="contacts__item contacts__item--marker">
+                        <p class="contacts__address">
+                          ООО «CIRCLE SCHOOL» <br>
+                          ИНН 0273908137 <br>
+                          КПП 027701001 <br>
+                          ОГРН 1160280082896
+                        </p>
+                        <p class="contacts__address">
+                          450065, Республика Башкортостан, <br>
+                          г. Уфа, ул. Карла Маркса, 3Б, офис 403 <br>
+                          по будням с 9:00 до 18:00
+                        </p>
+                      </li>
+                    </ul><!--/.contacts-->
+
+                  </address>
+
+                </div>
+
+              </div>
+
+            </div><!--/.sContainer-->
+
+          </div>
+
+        </nav><!--/.navigation-->
+
+      </div><!--/.header__inner-->
+
+    </div><!--/.sContainer-->
+  </header><!--/.header-->
+
+  <main>
+
+    <div class="registration">
+
+      <div class="sContainer">
+
+        <div class="registration__inner">
+
+          <h1 class="registration__title title">Регистрация</h1>
+
+          <form class="registration__form sForm sForm--registration" id="registration" action="" method="post">
+
+            <div class="sForm__inner sG-row-gap-20 sG-column-gap-20">
+
+              <div class="sForm__item">
+                <div class="sForm__title">Заполните форму регистрации</div>
+              </div>
+
+              <label class="sForm__item">
+                <span class="sForm__label">Действующие E-mail*</span>
+                <input class="sForm__input js-email-validate" type="text" name="email" placeholder="email@email.com">
+              </label>
+
+              <label class="sForm__item">
+                <span class="sForm__label">Придумайте пароль</span>
+                <input class="sForm__input js-required-validate" id="password" type="password" name="password" placeholder="Введите пароль">
+              </label>
+
+              <div class="sForm__item">
+                <label for="repeat_password" class="sForm__label">Повторите пароль</label>
+                <input class="sForm__input js-password-validate" id="repeat_password" type="password" name="repeat_password" placeholder="Повторите пароль">
+                <p class="sForm__text sMt-10 sMb-lg-28">
+                  Уже есть аккаунт? Перейди на страницу
+                  <a class="sForm__link" href="">Главная</a>
+                </p>
+                <p class="sForm__text sD-none sD-lg-block sMb-lg-28 sForm__text--big">
+                  Нажимая кнопку «Регистрация», вы подтверждаете, что согласны на
+                  <a class="sForm__link" href="">обработку персональных данных</a>.
+                </p>
+                <button class="btn btn--primary" type="submit">Регистрация</button>
+
+                <p class="sForm__text sMt-32">*При завершении регистрации на указанный электронный адрес будет отправлено письмо для активации</p>
+              </div>
+
+            </div><!--/.sForm__inner-->
+
+          </form><!--/.sForm-->
+
+        </div><!--/.registration__inner-->
+
+      </div><!--/.sContainer-->
+    </div><!--/.registration-->
+
+  </main>
+
+  <footer class="footer">
+    <div class="sContainer">
+
+      <div class="footer__inner">
+
+        <a href="" class="footer__logo logo">
+          <img class="logo__img" src="assets/img/logo-footer.svg" width="187" height="21" alt="Логотип MED.PROGRESS">
+        </a><!--/.logo-->
+
+        <ul class="footer__menu menu menu--footer sD-none sD-lg-flex">
+          <li class="menu__item">
+            <a href="" class="menu__link">Главная</a>
+          </li>
+          <li class="menu__item">
+            <a href="" class="menu__link">Платежи через сайт</a>
+          </li>
+          <li class="menu__item">
+            <a href="" class="menu__link">О нас</a>
+          </li>
+          <li class="menu__item">
+            <a href="" class="menu__link">Политика конфеденциальности</a>
+          </li>
+          <li class="menu__item">
+            <a href="" class="menu__link">Публичная оферта</a>
+          </li>
+        </ul><!--/.menu-->
+
+      </div><!--/.footer__inner-->
+
+    </div><!--/.sContainer-->
+  </footer><!--/.footer-->
+
+</body>
+
+</html>

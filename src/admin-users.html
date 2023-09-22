@@ -1,0 +1,58 @@
+---
+layout: admin
+
+title: Список пользователей | Кабинет администратора
+description: Описания список пользователей
+
+link: style.min.css
+script: ['runtime.js', 'select2.js', 'datepicker.js', 'main.js', 'adminAccount.js']
+
+lottiePlayer: false
+---
+
+{{> header-admin}}
+
+<main>
+
+  <div class="personal">
+
+    <div class="sContainer">
+
+      <div class="personal__inner">
+
+        <h1 class="personal__title title">Кабинет администратора</h1>
+
+        <div class="sRow">
+
+          <div class="sCol-3">
+
+            <aside class="personal__sidebar sidebar">
+
+              {{> sidebar-menu-admin}}
+
+            </aside><!--/.sidebar-->
+
+          </div>
+
+          <div class="sCol-9">
+
+            <div class="personal__content content content--users">
+
+              {{> admin-account}}
+
+            </div><!--/.content-->
+
+          </div>
+
+        </div>
+
+      </div><!--/.personal__inner"-->
+
+    </div><!--/.sContainer-->
+  </div><!--/.personal-->
+
+</main>
+
+{{> footer-admin}}
+
+{{> modal}}

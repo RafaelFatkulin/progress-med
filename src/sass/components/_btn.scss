@@ -1,0 +1,187 @@
+@use "sass:color";
+
+@use "../variables" as v;
+@use "../library/sumbiot/general/mixins" as m;
+
+.btn{
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+
+  padding: 15px;
+
+  background-color: v.$white;
+
+  border: none;
+  border-radius: 10px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  font-family: "Montserrat", sans-serif;
+
+  color: v.$primary;
+
+  text-align: center;
+  text-decoration: none;
+
+  user-select: none;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+
+  &:focus{
+    outline-width: 0;
+  }
+
+  @include m.media('lg') {
+    &:hover{
+
+    }
+
+    &:active{
+
+    }
+
+    &:focus{
+      outline-width: 1px;
+    }
+  }
+
+  &--primary {
+    background-color: v.$primary;
+
+    color: v.$white;
+
+    border: 1px solid rgba(v.$primary,0);
+
+    .registration & {
+      width: 100%;
+
+      font-size: 18px;
+      font-weight: 700;
+
+      border-width: 2px;
+
+      @include m.media('lg') {
+        width: 520px;
+      }
+    }
+
+    .entry & {
+      width: 100%;
+
+      margin-top: 10px;
+
+      font-size: 18px;
+      font-weight: 700;
+
+      border-width: 2px;
+
+      &:hover{
+        color: v.$white;
+
+        background-color: v.$primary;
+
+        border-color: v.$primary;
+      }
+    }
+
+    .content--data & {
+      padding: 10px 30px;
+    }
+
+    .content__form-search &{
+      padding: 5px 19px;
+    }
+
+    .content--edit-user & {
+      padding: 10px 30px;
+    }
+
+    .content__wrapper-btn &{
+      padding: 5px 20px;
+    }
+
+    .content__form-page &{
+      padding: 5px 20px;
+    }
+
+    &:hover{
+      color: v.$primary;
+
+      background-color: v.$white;
+
+      border-color: v.$primary;
+    }
+  }
+
+  &--success{
+    background-color: v.$success;
+
+    color: v.$white;
+
+    border: 1px solid rgba(v.$success,0);
+
+    .sForm--confirm & {
+      padding: 10px 5px;
+
+      line-height: 14px;
+
+      border-radius: 3px;
+    }
+
+    &:hover{
+      background-color: color.scale(v.$success, $lightness: -3%);
+    }
+  }
+
+  &--cancel{
+    background-color: v.$cancel;
+
+    color: v.$primary;
+
+    border: 1px solid rgba(v.$cancel,0);
+
+    .sForm--confirm & {
+      padding: 10px 5px;
+
+      line-height: 14px;
+
+      border-radius: 3px;
+    }
+
+    &:hover{
+      background-color: color.scale(v.$cancel, $lightness: -3%);
+    }
+  }
+
+  &--error{
+    background-color: v.$danger;
+
+    color: v.$white;
+
+    border: 1px solid rgba(v.$danger,0);
+
+    &:hover{
+      background-color: color.scale(v.$danger, $lightness: -3%);
+    }
+  }
+
+  &--transparent {
+    border: 1px solid #F1F1F1;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    padding: 10px 30px;
+
+    &:hover{
+      border-color: rgba(v.$primary,0.5);
+
+      box-shadow: none;
+    }
+  }
+
+}
