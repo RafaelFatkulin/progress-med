@@ -1,44 +1,61 @@
 @use "../variables" as v;
 @use "../library/sumbiot/general/mixins" as m;
 
-.personal{
-
+.personal {
 }
 
-.personal__inner{
+.personal__inner {
   padding: 20px 0 50px 0;
 
-  @include m.media('lg') {
+  @include m.media("lg") {
     padding: 80px 0;
   }
 
-  @include m.media('xl') {
+  @include m.media("xl") {
     padding: 100px 0;
   }
 }
 
-.personal__title{
+.personal__title {
   margin: 0 0 40px 0;
 
-  @include m.media('lg') {
+  @include m.media("lg") {
     margin: 0 0 50px 0;
   }
 
-  @include m.media('xl') {
+  @include m.media("xl") {
     margin: 0 0 70px 0;
   }
 }
 
-.personal__sidebar{
-
+.personal__sidebar {
 }
 
-.personal__content{
+.personal__content {
+  .record-input {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
 
+    input {
+      border-radius: 8px;
+      border: 1px solid rgba(44, 61, 115, 0.5);
+      background: #fff;
+      padding: 4px 16px;
+      height: 24px;
+      color: #2C3D73;
+      transition: all .2s ease;
+
+
+      &:focus, &:hover {
+        border-color: #1D77FA;
+        outline: none;
+      }
+    }
+  }
 }
 
-.personal__img{
-
+.personal__img {
   img {
     display: block;
 

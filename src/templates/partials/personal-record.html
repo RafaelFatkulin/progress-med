@@ -1,5 +1,5 @@
 
-{{#ifpage 'personal-record-department'}}
+{{#ifpage 'personal-record-department' 'cashier-record-department'}}
 <!--Выбертие отделение-->
 <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-10 sText-transform-none">Запись к врачу</h2>
 
@@ -24,7 +24,7 @@
 
 
 
-{{#ifpage 'personal-record-service'}}
+{{#ifpage 'personal-record-service' 'cashier-record-service'}}
 <!--Выбертие услугу-->
 <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-10 sText-transform-none">Запись к врачу</h2>
 
@@ -49,7 +49,7 @@
 
 
 
-{{#ifpage 'personal-record-doctor'}}
+{{#ifpage 'personal-record-doctor' 'cashier-record-doctor'}}
 <!--Выбертие врача-->
 <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-10 sText-transform-none">Запись к врачу</h2>
 
@@ -77,7 +77,7 @@
 
 
 
-{{#ifpage 'personal-record-date'}}
+{{#ifpage 'personal-record-date' 'cashier-record-date'}}
 <!--Выбертие дату-->
 <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-10 sText-transform-none">Запись к врачу</h2>
 
@@ -128,7 +128,7 @@
 
 
 
-{{#ifpage 'personal-record-time' 'doctor-record-time'}}
+{{#ifpage 'personal-record-time' 'doctor-record-time' 'cashier-record-time'}}
 <!--Выбертие время-->
 <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-10 sText-transform-none">Запись к врачу</h2>
 
@@ -150,7 +150,7 @@
   </li>
 </ul><!--/.breadcrumbs-->
 
-{{#ifpage 'personal-record-time'}}
+{{#ifpage 'personal-record-time' 'cashier-record-time'}}
 <div class="table table--hover table--outline table--v2">
 {{/ifpage}}
 {{#ifpage 'doctor-record-time'}}
@@ -166,7 +166,7 @@
     </div>
   </div>
 
-  {{#ifpage 'personal-record-time'}}
+  {{#ifpage 'personal-record-time' 'cashier-record-time'}}
   {{#repeat 2}}
   <a class="table__row table__row--success" href="">
     <span class="table__col">12:20</span>
@@ -208,7 +208,7 @@
 
 
 
-{{#ifpage 'personal-record-confirm' 'doctor-record-confirm'}}
+{{#ifpage 'personal-record-confirm' 'doctor-record-confirm' 'cashier-record-confirm'}}
 <!--Подтвердить запись к врачу-->
 <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-28 sText-transform-none">Запись к врачу</h2>
 
@@ -220,6 +220,18 @@
     <div class="sForm__item">
       <span class="sForm__label">Пациент: Иванов Иван Иванович</span>
       <input type="hidden" name="institution" value="Иванов Иван Иванович">
+    </div>
+    {{/ifpage}}
+
+    {{#ifpage 'cashier-record-confirm'}}
+    <div class="sForm__item record-input">
+      <span class="sForm__label">Пациент:</span>
+      <input type="text" name="patient" value="Иванов Иван Иванович">
+    </div>
+
+    <div class="sForm__item record-input">
+      <span class="sForm__label">СНИЛС:</span>
+      <input type="text" name="snils" value="Иванов Иван Иванович">
     </div>
     {{/ifpage}}
 

@@ -1,8 +1,8 @@
 
-{{#ifpage 'admin-users' 'registry-users'}}
+{{#ifpage 'admin-users' 'registry-users' 'cashier-users'}}
 <!--Список пользователей-->
 <h2 class="content__title title sFw-500 sFz-20 sText-transform-none">
-  {{#ifpage 'admin-users'}}
+  {{#ifpage 'admin-users' 'cashier-users'}}
   Список пользователей
   {{/ifpage}}
   {{#ifpage 'registry-users'}}

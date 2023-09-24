@@ -1,0 +1,312 @@
+<!doctype html>
+
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Запись | Личный кабинет</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="author" content="Abraklion">
+  <meta name="description" content="Описание запись">
+
+  <link rel="stylesheet" href="assets/css/style.min.css">
+
+  <script defer src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+  <script defer src="js/runtime.js"></script>
+  <script defer src="js/validation.js"></script>
+  <script defer src="js/main.js"></script>
+  <script defer src="js/personalAccount.js"></script>
+</head>
+
+<body class="page__body">
+
+  <header class="header">
+    <div class="sContainer">
+
+      <div class="header__inner">
+
+        <a href="" class="header__logo logo">
+          <picture>
+            <source media="(min-width: 992px)" srcset="assets/img/logo-desktop.svg" type="image/svg+xml">
+            <img class="logo__img" src="assets/img/logo-mobile.svg" width="32" height="19" alt="Логотип MED.PROGRESS">
+          </picture>
+        </a><!--/.logo-->
+
+        <a class="header__phone" href="tel:+79991234567">+7 (999) 123 45 67</a>
+
+        <nav class="header__navigation navigation">
+
+          <button class="navigation__burger burger js-burger" data-sumbiot-target=".js-menu" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button><!--/.burger-->
+
+          <div class="navigation__inner js-menu" data-sumbiot-modal>
+
+            <div class="sContainer">
+
+              <div class="sRow">
+
+                <div class="sCol-md-6">
+
+                  <div class="navigation__menu-inner">
+
+                    <h2 class="navigation__title title">Меню</h2>
+
+                    <ul class="navigation__menu menu menu--icon sMb-32 sD-lg-none">
+                      <li class="menu__item">
+                        <a href="" class="menu__link active">
+                          <svg class="menu__icon" width="30" height="30" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-hospital" />
+                          </svg>
+                          О медицинском учреждении
+                        </a>
+                      </li>
+                      <li class="menu__item">
+                        <a href="" class="menu__link">
+                          <svg class="menu__icon" width="30" height="30" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-card" />
+                          </svg>
+                          Услуги
+                        </a>
+                      </li>
+                      <li class="menu__item">
+                        <a href="" class="menu__link">
+                          <svg class="menu__icon" width="30" height="30" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-map" />
+                          </svg>
+                          Местонахождение
+                        </a>
+                      </li>
+                    </ul><!--/.menu-->
+
+                    <ul class="navigation__menu menu">
+                      <li class="menu__item">
+                        <a href="" class="menu__link">Главная</a>
+                      </li>
+                      <li class="menu__item">
+                        <a href="" class="menu__link">Сервисы</a>
+                      </li>
+                      <li class="menu__item">
+                        <a href="" class="menu__link">О нас</a>
+                      </li>
+                    </ul><!--/.menu-->
+
+                  </div>
+
+                </div>
+
+                <div class="sCol-md-6">
+
+                  <address class="navigation__contacts-inner">
+
+                    <h2 class="navigation__title title">Контакты</h2>
+
+                    <ul class="navigation__contacts contacts">
+                      <li class="contacts__item contacts__item--mail">
+                        <a class="contacts__link" href="mailto:info@circleschool.ru">info@circleschool.ru</a>
+                      </li>
+                      <li class="contacts__item contacts__item--phone">
+                        <a class="contacts__link" href="tel:+79991234567">+7 (999) 123 45 67</a>
+                      </li>
+                      <li class="contacts__item contacts__item--marker">
+                        <p class="contacts__address">
+                          ООО «CIRCLE SCHOOL» <br>
+                          ИНН 0273908137 <br>
+                          КПП 027701001 <br>
+                          ОГРН 1160280082896
+                        </p>
+                        <p class="contacts__address">
+                          450065, Республика Башкортостан, <br>
+                          г. Уфа, ул. Карла Маркса, 3Б, офис 403 <br>
+                          по будням с 9:00 до 18:00
+                        </p>
+                      </li>
+                    </ul><!--/.contacts-->
+
+                  </address>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </nav><!--/.navigation-->
+
+      </div><!--/.header__inner-->
+
+    </div><!--/.sContainer-->
+  </header><!--/.header-->
+
+  <main>
+
+    <div class="personal">
+
+      <div class="sContainer">
+
+        <div class="personal__inner">
+
+          <h1 class="personal__title title">Личный кабинет</h1>
+
+          <div class="sRow">
+
+            <div class="sCol-lg-4 sCol-xl-3 sD-none sD-lg-block">
+
+              <aside class="personal__sidebar sidebar">
+
+                <ul class="sidebar__menu menu--icon menu">
+                  <li class="menu__item">
+                    <a href="" class="menu__link ">
+                      <svg class="menu__icon" width="30" height="30" aria-hidden="true">
+                        <use xlink:href="assets/img/sprite/sprite.svg#icon-info" />
+                      </svg>
+                      Личные данные
+                    </a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="" class="menu__link ">
+                      <svg class="menu__icon" width="30" height="30" aria-hidden="true">
+                        <use xlink:href="assets/img/sprite/sprite.svg#icon-add" />
+                      </svg>
+                      Создать пациента
+                    </a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="" class="menu__link ">
+                      <svg class="menu__icon" width="30" height="30" aria-hidden="true">
+                        <use xlink:href="assets/img/sprite/sprite.svg#icon-schedule" />
+                      </svg>
+                      Запись к врачу
+                    </a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="" class="menu__link ">
+                      <svg class="menu__icon" width="30" height="30" aria-hidden="true">
+                        <use xlink:href="assets/img/sprite/sprite.svg#icon-patients" />
+                      </svg>
+                      Список пациентов
+                    </a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="" class="menu__link ">
+                      <svg class="menu__icon" width="30" height="30" aria-hidden="true">
+                        <use xlink:href="assets/img/sprite/sprite.svg#icon-list" />
+                      </svg>
+                      Выписки
+                    </a>
+                  </li>
+                </ul><!--/.menu-->
+
+              </aside><!--/.sidebar-->
+
+            </div>
+
+            <div class="sCol-lg-8 sCol-xl-9">
+
+              <div class="personal__content content content--record">
+
+                <!--Подтвердить запись к врачу-->
+                <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-28 sText-transform-none">Запись к врачу</h2>
+
+                <form action="" class="sForm sForm--confirm" method="post">
+
+                  <div class="sForm__inner sG-row-gap-20">
+
+                    <div class="sForm__item record-input">
+                      <span class="sForm__label">Пациент:</span>
+                      <input type="text" name="patient" value="Иванов Иван Иванович">
+                    </div>
+
+                    <div class="sForm__item record-input">
+                      <span class="sForm__label">СНИЛС:</span>
+                      <input type="text" name="snils" value="Иванов Иван Иванович">
+                    </div>
+
+                    <div class="sForm__item">
+                      <span class="sForm__label">Учреждение: Поликлинника №52</span>
+                      <input type="hidden" name="institution" value="Поликлинника №52">
+                    </div>
+
+                    <div class="sForm__item">
+                      <span class="sForm__label">Отделение: Травмпункт</span>
+                      <input type="hidden" name="department" value="Травмпункт">
+                    </div>
+
+                    <div class="sForm__item">
+                      <span class="sForm__label">Услуга: Рентген</span>
+                      <input type="hidden" name="service" value="Рентген">
+                    </div>
+
+                    <div class="sForm__item">
+                      <span class="sForm__label">Врач: Андреев Андрей Андреевич</span>
+                      <input type="hidden" name="doctor" value="Андреев Андрей Андреевич">
+                    </div>
+
+                    <div class="sForm__item">
+                      <span class="sForm__label">Дата и время: 15.04.2022 в 16:00</span>
+                      <input type="hidden" name="date" value="2022-04-15">
+                      <input type="hidden" name="time" value="16:00">
+                    </div>
+
+                    <div class="sForm__item">
+                      <div class="sForm__linear sForm__linear--v2">
+                        <button class="btn btn--success" type="submit">Подтвердить</button>
+                        <a class="btn btn--cancel" href="">Отмена</a>
+                      </div>
+                    </div>
+
+                  </div><!--/.sForm__inner-->
+                </form><!--/.sForm-->
+
+              </div><!--/.content-->
+
+            </div>
+
+          </div>
+
+        </div><!--/.personal__inner"-->
+
+      </div><!--/.sContainer-->
+    </div><!--/.personal-->
+
+  </main>
+
+  <footer class="footer">
+    <div class="sContainer">
+
+      <div class="footer__inner">
+
+        <a href="" class="footer__logo logo">
+          <img class="logo__img" src="assets/img/logo-footer.svg" width="180" height="20" alt="Логотип MED.PROGRESS">
+        </a><!--/.logo-->
+
+        <ul class="footer__menu menu menu--footer sD-none sD-lg-flex">
+          <li class="menu__item">
+            <a href="" class="menu__link">Главная</a>
+          </li>
+          <li class="menu__item">
+            <a href="" class="menu__link">Сервисы</a>
+          </li>
+          <li class="menu__item">
+            <a href="" class="menu__link">О нас</a>
+          </li>
+          <li class="menu__item">
+            <a href="" class="menu__link">Другие страницы</a>
+          </li>
+        </ul><!--/.menu-->
+
+      </div><!--/.footer__inner-->
+
+    </div><!--/.sContainer-->
+  </footer><!--/.footer-->
+
+</body>
+
+</html>
