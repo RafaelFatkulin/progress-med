@@ -3,23 +3,25 @@
 @use "../variables" as v;
 @use "../library/sumbiot/general/mixins" as m;
 
-.table{
-
+.table {
   margin-bottom: 40px;
-
-  &--odd{
-
-    .table__row{
-
+  width: 100%;
+  max-width: 100%;
+  &-responsive {
+    overflow-x: auto;
+    width: 100%;
+    max-width: calc(100vw - 20px);
+  }
+  &--odd {
+    .table__row {
       &:nth-child(odd) {
         background-color: rgba(v.$primary, 0.05);
       }
     }
   }
 
-  &--even{
-    .table__row{
-
+  &--even {
+    .table__row {
       &:nth-child(even) {
         background-color: rgba(v.$primary, 0.05);
       }
@@ -27,23 +29,21 @@
   }
 
   &--outline {
-    .table__row:not(.table__row--header){
+    .table__row:not(.table__row--header) {
       //outline: 1px solid rgba(v.$white, 0.7);
       //outline-offset: -1px;
       margin-bottom: 1px;
     }
   }
 
-  &--hover{
-
-    .table__row:not(.table__row--header){
-
-      &:hover{
+  &--hover {
+    .table__row:not(.table__row--header) {
+      &:hover {
         border-radius: 3px;
 
         outline: none;
 
-        box-shadow: 0 0 0 3px rgba(v.$primary2,0.6);
+        box-shadow: 0 0 0 3px rgba(v.$primary2, 0.6);
 
         position: relative;
         z-index: 1;
@@ -51,12 +51,9 @@
     }
   }
 
-  &--hover-shadow{
-
-    .table__row:not(.table__row--header){
-
-      &:hover{
-
+  &--hover-shadow {
+    .table__row:not(.table__row--header) {
+      &:hover {
         box-shadow: 0 0 15px 0 rgba(v.$black, 0.15);
 
         position: relative;
@@ -66,24 +63,24 @@
   }
 
   &--v1 {
-    .table__row{
+    .table__row {
       grid-template-columns: 75% 23%;
       grid-column-gap: 2%;
 
-      @include m.media('md') {
+      @include m.media("md") {
         grid-template-columns: 60% 20% 16%;
       }
     }
   }
 
   &--v2 {
-    .table__row{
+    .table__row {
       grid-template-columns: 100px 1fr;
     }
   }
 
   &--v3 {
-    .table__row{
+    .table__row {
       align-items: center;
 
       grid-template-columns: 193px 155px 145px 180px 100px;
@@ -92,7 +89,7 @@
   }
 
   &--v4 {
-    .table__row{
+    .table__row {
       align-items: center;
 
       grid-template-columns: 263px 140px 140px 160px 70px;
@@ -101,7 +98,7 @@
   }
 
   &--v5 {
-    .table__row{
+    .table__row {
       align-items: center;
 
       grid-template-columns: 428px 215px 160px;
@@ -109,9 +106,26 @@
     }
   }
 
+  &--v6 {
+    .table__row {
+      width: 100%;
+      align-items: center;
+
+      grid-template-columns: 2fr 4fr 2fr;
+      grid-column-gap: 15px;
+
+      .table__col {
+        &:last-of-type {
+          text-align: right;
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
 }
 
-.table__row{
+.table__row {
   display: grid;
   grid-column-gap: 10px;
 
@@ -123,28 +137,28 @@
 
   transition: all 0.2s ease;
 
-  &--header{
-    border-bottom: 1px solid rgba(v.$primary,0.5);
+  &--header {
+    border-bottom: 1px solid rgba(v.$primary, 0.5);
 
     b {
       font-weight: 600;
     }
   }
 
-  &--success{
-    background-color: #c8ece0!important;
+  &--success {
+    background-color: #c8ece0 !important;
   }
 
-  &--danger{
-    background-color: #efcfcf!important;
+  &--danger {
+    background-color: #efcfcf !important;
   }
 }
 
-.table__col{
+.table__col {
   overflow: hidden;
 }
 
-.table__wrapper-btn{
+.table__wrapper-btn {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -152,8 +166,8 @@
   padding: 0 0 0 15px;
 }
 
-.table__link{
-  display:block;
+.table__link {
+  display: block;
 
   text-decoration: none;
 
@@ -163,16 +177,16 @@
 
   transition: all 0.2s ease;
 
-  &:hover{
+  &:hover {
     opacity: 0.8;
   }
 
-  &:active{
+  &:active {
     opacity: 1;
   }
 }
 
-.table__icon{
+.table__icon {
   display: block;
 
   width: 21px;

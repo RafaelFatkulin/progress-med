@@ -1,12 +1,14 @@
 import mask from "./modules/mask";
+import select2 from "./modules/select2";
 import validator from "./modules/validator";
 
-window.addEventListener('DOMContentLoaded', () => {
-
+window.addEventListener("DOMContentLoaded", () => {
   // Маски
-  mask()
+  mask();
 
   // Валидация форм
-  validator()
+  validator();
 
-})
+  // Кастомный выпадающий список
+  select2();
+});

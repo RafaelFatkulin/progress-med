@@ -18,6 +18,7 @@
   <script defer src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 
   <script defer src="js/runtime.js"></script>
+  <script defer src="js/select2.js"></script>
   <script defer src="js/validation.js"></script>
   <script defer src="js/main.js"></script>
   <script defer src="js/personalAccount.js"></script>
@@ -165,7 +166,7 @@
                   <li class="menu__item">
                     <a href="" class="menu__link active">
                       <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-                        <use xlink:href="assets/img/sprite/sprite.svg#icon-hospital" />
+                        <use xlink:href="assets/img/sprite/sprite.svg#icon-info" />
                       </svg>
                       О медицинском учреждении
                     </a>
@@ -173,7 +174,23 @@
                   <li class="menu__item">
                     <a href="" class="menu__link">
                       <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-                        <use xlink:href="assets/img/sprite/sprite.svg#icon-card" />
+                        <use xlink:href="assets/img/sprite/sprite.svg#icon-doctors" />
+                      </svg>
+                      Врачи
+                    </a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="" class="menu__link">
+                      <svg class="menu__icon" width="30" height="30" aria-hidden="true">
+                        <use xlink:href="assets/img/sprite/sprite.svg#icon-services" />
+                      </svg>
+                      Запись к врачу
+                    </a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="" class="menu__link">
+                      <svg class="menu__icon" width="30" height="30" aria-hidden="true">
+                        <use xlink:href="assets/img/sprite/sprite.svg#icon-ruble" />
                       </svg>
                       Услуги
                     </a>
@@ -229,9 +246,30 @@
                       <input type="hidden" name="time" value="16:00">
                     </div>
 
+                    <div class="sForm__item record-select">
+                      <div class="sForm__linear sForm__linear--v4 sG-justify-content-left sP-relative">
+                        <label class="sForm__label" for="type_payment">Способ оплаты</label>
+                        <select class="sForm__select js-select2" name="type_payment" id="type_payment" required>
+                          <option value="online">Онлайн</option>
+                          <option value="cash">Наличные</option>
+                        </select>
+                      </div>
+                    </div><!--/.sForm__item-->
+
+                    <div class="sForm__item record-input">
+                      <input type="checkbox" name="agreement" id="agreement">
+                      <label for="agreement" class="sForm__label">Даю согласие на обработку персональных данных</label>
+                    </div>
+
+                    <div class="sForm__item record-input">
+                      <input type="checkbox" name="offer" id="offer">
+                      <label for="offer" class="sForm__label">Ознакомлен с <a class="record-input__link" href=""> договором оферты </a>
+                        и <a class="record-input__link" href=""> правилами предоставления услуг </a></label>
+                    </div>
+
                     <div class="sForm__item">
                       <div class="sForm__linear sForm__linear--v2">
-                        <button class="btn btn--success" type="submit">Подтвердить</button>
+                        <button class="btn btn--success js-confirm-record" type="submit">Подтвердить</button>
                         <a class="btn btn--cancel" href="">Отмена</a>
                       </div>
                     </div>
