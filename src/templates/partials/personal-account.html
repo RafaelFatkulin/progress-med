@@ -122,7 +122,9 @@
   </div>
 </form>
 <!--/.sForm-->
-{{/ifpage}} {{#ifpage 'personal-hospitals-list'}}
+{{/ifpage}}
+
+{{#ifpage 'personal-hospitals-list'}}
 <!--Медицинские учреждения-->
 <div class="content__box">
   <h2
@@ -263,7 +265,9 @@
   </div>
 </div>
 <!--/.content__box-->
-{{/ifpage}} {{#ifpage 'personal-extract' 'doctor-extract'}}
+{{/ifpage}}
+
+{{#ifpage 'personal-extract' 'doctor-extract'}}
 <!--Выписка-->
 <h2
   class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-xl-40 sText-transform-none"
@@ -286,7 +290,9 @@
 </div>
 
 <a href="" class="btn btn--transparent">Еще</a>
-{{/ifpage}} {{#ifpage 'personal-hospital'}}
+{{/ifpage}}
+
+{{#ifpage 'personal-hospital'}}
 <!--Поликлиника-->
 <h2
   class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-40 sText-transform-none"
@@ -327,7 +333,9 @@
     etc.
   </p>
 </div>
-{{/ifpage}} {{#ifpage 'personal-location-hospital'}}
+{{/ifpage}}
+
+{{#ifpage 'personal-location-hospital'}}
 <!--Местонахождение-->
 <iframe
   class="content__map"
@@ -336,7 +344,9 @@
   height="400"
   allowfullscreen="true"
 ></iframe>
-{{/ifpage}} {{#ifpage 'about'}}
+{{/ifpage}}
+
+{{#ifpage 'about'}}
 <!--Технические страницы-->
 <div class="content__text">
   <h1>Заголовок H1</h1>
@@ -396,7 +406,9 @@
   <p>Так <b>жирный</b></p>
   <p>Так <i>курсив</i></p>
 </div>
-{{/ifpage}} {{#ifpage 'personal-hospital-price-list'}}
+{{/ifpage}}
+
+{{#ifpage 'personal-hospital-price-list'}}
 <!--Медицинские учреждения-->
 <div class="content__box">
   <h2
@@ -467,7 +479,9 @@
   <a href="" class="btn btn--transparent btn---more">Еще</a>
 </div>
 <!--/.content__box-->
-{{/ifpage}} {{#ifpage 'personal-hospital-doctors'}}
+{{/ifpage}}
+
+{{#ifpage 'personal-hospital-doctors'}}
 <!--Медицинские учреждения-->
 <div class="content__box">
   <h2
@@ -572,7 +586,9 @@
   <a href="" class="btn btn--transparent btn---more">Посмотреть все</a>
 </div>
 <!--/.content__box-->
-{{/ifpage}} {{#ifpage 'personal-hospital-doctor'}}
+{{/ifpage}}
+
+{{#ifpage 'personal-hospital-doctor'}}
 <!--Медицинские учреждения-->
 <div class="content__box">
   <h2
@@ -662,4 +678,57 @@
   </div>
 </div>
 <!--/.content__box-->
+{{/ifpage}}
+
+{{#ifpage 'personal-prescriptions'}}
+<div class="content__box">
+  <h2
+    class="content__title title sFw-500 sFz-18 sFz-lg-20 sText-transform-none"
+  >
+    История назначения
+  </h2>
+
+  <form action="" class="content__form-search sForm" method="post">
+
+    <div class="sForm__inner">
+
+      <div class="sForm__item">
+        <label class="visually-hidden" for="title">Поиск по названию</label>
+        <input class="sForm__input" id="title" type="text" name="title" placeholder="Поиск по названию">
+      </div><!--/.sForm__item-->
+
+      <div class="sForm__item">
+        <div class="sForm__linear sForm__linear--v3">
+          <label class="sForm__label" for="start_date">от</label>
+          <input class="sForm__input js-datepicker" id="start_date" type="text" placeholder="00.00.00" autocomplete="off">
+
+          <label class="sForm__label" for="end_date">до</label>
+          <input class="sForm__input js-datepicker" id="end_date" type="text" name="end_date" placeholder="00.00.00" autocomplete="off">
+        </div>
+      </div><!--/.sForm__item-->
+
+      <div class="sForm__item">
+        <button class="btn btn--primary" type="submit">Вывести</button>
+      </div><!--/.sForm__item-->
+
+    </div><!--/.sForm__inner-->
+
+  </form><!--/.sForm-->
+
+  <div class="table table--odd table--v7">
+    {{#repeat 7}}
+    <div class="table__row">
+      <div class="table__col">
+        Лекарство 1
+      </div>
+      <div class="table__col sText-align-center sD-md-block">
+        02.12.24 12:34
+      </div>
+      <div class="table__col sText-align-right">Врач 1</div>
+    </div>
+    {{/repeat}}
+  </div>
+
+  <a href="" class="btn btn--transparent">Еще</a>
+</div>
 {{/ifpage}}

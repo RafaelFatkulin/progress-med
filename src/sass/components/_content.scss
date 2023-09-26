@@ -109,6 +109,44 @@
 
   &--price-list {
   }
+
+  &--prescriptions {
+    .sForm__inner {
+      grid-template-columns: 1fr;
+
+      .sForm__item {
+        .sForm__linear {
+          grid-template-columns: auto 1fr;
+          grid-gap: 24px;
+
+          @include m.media("sm") {
+            grid-template-columns: repeat(2, auto 1fr);
+          }
+        }
+        .btn {
+          width: 100%;
+        }
+      }
+
+      @include m.media("md") {
+        grid-template-columns: 4fr 5fr auto;
+
+        .sForm__item {
+          .sForm__linear {
+            grid-gap: 12px;
+          }
+        }
+      }
+
+      @include m.media("lg") {
+        grid-template-columns: 4fr 6fr auto;
+      }
+
+      @include m.media("xl") {
+        grid-template-columns: 3fr 2fr auto;
+      }
+    }
+  }
 }
 
 .content__box {

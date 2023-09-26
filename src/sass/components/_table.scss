@@ -123,6 +123,17 @@
       }
     }
   }
+
+  &--v7 {
+    .table__row {
+      grid-template-columns: 4fr 3fr 4fr;
+      grid-column-gap: 6px;
+
+      @include m.media("md") {
+        grid-template-columns: 60% 20% 16%;
+      }
+    }
+  }
 }
 
 .table__row {

@@ -1,43 +1,54 @@
-
 <ul class="sidebar__menu menu--icon menu">
   <li class="menu__item">
     <a href="" class="menu__link {{#ifpage 'cashier-data'}}active{{/ifpage}}">
       <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-        <use xlink:href="assets/img/sprite/sprite.svg#icon-info"/>
+        <use xlink:href="assets/img/sprite/sprite.svg#icon-info" />
       </svg>
       Личные данные
     </a>
   </li>
   <li class="menu__item">
-    <a href="" class="menu__link {{#ifpage 'cashier-add-pacient'}}active{{/ifpage}}">
+    <a href="" class="menu__link">
       <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-        <use xlink:href="assets/img/sprite/sprite.svg#icon-add"/>
+        <use xlink:href="assets/img/sprite/sprite.svg#icon-add" />
       </svg>
       Создать пациента
     </a>
   </li>
   <li class="menu__item">
-    <a href="" class="menu__link {{#ifpage 'cashier-record-department'}}active{{/ifpage}}">
+    <a href="" class="menu__link">
       <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-        <use xlink:href="assets/img/sprite/sprite.svg#icon-schedule"/>
+        <use xlink:href="assets/img/sprite/sprite.svg#icon-schedule" />
       </svg>
       Запись к врачу
     </a>
   </li>
   <li class="menu__item">
-    <a href="" class="menu__link {{#ifpage 'cashier-users'}}active{{/ifpage}}">
+    <a href="" class="menu__link">
       <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-        <use xlink:href="assets/img/sprite/sprite.svg#icon-patients"/>
+        <use xlink:href="assets/img/sprite/sprite.svg#icon-patients" />
       </svg>
       Список пациентов
     </a>
   </li>
   <li class="menu__item">
-    <a href="" class="menu__link {{#ifpage 'cashier-extract'}}active{{/ifpage}}">
+    <a href="" class="menu__link">
       <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-        <use xlink:href="assets/img/sprite/sprite.svg#icon-list"/>
+        <use xlink:href="assets/img/sprite/sprite.svg#icon-list" />
       </svg>
       Выписки
     </a>
   </li>
-</ul><!--/.menu-->
+  <li class="menu__item">
+    <form action="">
+      <input type="hidden" name="_token" value="" />
+      <button class="menu__link">
+        <svg class="menu__icon" width="30" height="30" aria-hidden="true">
+          <use xlink:href="assets/img/sprite/sprite.svg#icon-exit" />
+        </svg>
+        Выйти
+      </button>
+    </form>
+  </li>
+</ul>
+<!--/.menu-->
