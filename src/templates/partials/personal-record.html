@@ -76,10 +76,17 @@
 
 
 
-{{#ifpage 'personal-record-date' 'cashier-record-date'}}
+{{#ifpage 'personal-record-date' 'doctor-record-date' 'cashier-record-date'}}
 <!--Выбертие дату-->
+{{#unlesspage 'doctor-record-date'}}
 <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-10 sText-transform-none">Запись к врачу</h2>
+{{/unlesspage}}
 
+{{#ifpage 'doctor-record-date'}}
+<h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-10 sText-transform-none">Записи</h2>
+{{/ifpage}}
+
+{{#unlesspage 'doctor-record-date'}}
 <ul class="content__breadcrumbs breadcrumbs">
   <li class="breadcrumbs__item">
     <a class="breadcrumbs__link" href="">Выберите отделение</a>
@@ -94,6 +101,15 @@
     Выберите дату
   </li>
 </ul><!--/.breadcrumbs-->
+{{/unlesspage}}
+
+{{#ifpage 'doctor-record-date'}}
+<ul class="content__breadcrumbs breadcrumbs">
+  <li class="breadcrumbs__item">
+    Выберите дату
+  </li>
+</ul><!--/.breadcrumbs-->
+{{/ifpage}}
 
 <div class="table table--even table--hover table--v2">
 
@@ -129,8 +145,15 @@
 
 {{#ifpage 'personal-record-time' 'doctor-record-time' 'cashier-record-time'}}
 <!--Выбертие время-->
+{{#unlesspage 'doctor-record-time'}}
 <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-10 sText-transform-none">Запись к врачу</h2>
+{{/unlesspage}}
 
+{{#ifpage 'doctor-record-time'}}
+<h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-10 sText-transform-none">Записи</h2>
+{{/ifpage}}
+
+{{#unlesspage 'doctor-record-time'}}
 <ul class="content__breadcrumbs breadcrumbs">
   <li class="breadcrumbs__item">
     <a class="breadcrumbs__link" href="">Выберите отделение</a>
@@ -148,6 +171,18 @@
     Выберите время
   </li>
 </ul><!--/.breadcrumbs-->
+{{/unlesspage}}
+
+{{#ifpage 'doctor-record-time'}}
+<ul class="content__breadcrumbs breadcrumbs">
+  <li class="breadcrumbs__item">
+    <a class="breadcrumbs__link" href="">15.04.2022</a>
+  </li>
+  <li class="breadcrumbs__item">
+    Выберите время
+  </li>
+</ul><!--/.breadcrumbs-->
+{{/ifpage}}
 
 {{#ifpage 'personal-record-time' 'cashier-record-time'}}
 <div class="table table--hover table--outline table--v2">
