@@ -147,6 +147,51 @@
       }
     }
   }
+
+  &--medical-history {
+  }
+
+  &--illness {
+    .illness {
+      &__title {
+        margin-bottom: 24px;
+
+        @include m.media("md") {
+          margin-bottom: 36px;
+        }
+
+        @include m.media("lg") {
+          margin-bottom: 48px;
+        }
+      }
+
+      &__list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        padding-left: 0;
+      }
+
+      &__link {
+        color: rgb(44, 61, 115);
+        transition: all 0.2s ease;
+
+        &:hover {
+          color: #1d77fa;
+        }
+      }
+    }
+  }
+
+  &--feedback {
+    .sForm__input {
+      padding: 5px 30px;
+    }
+    .btn--cancel {
+      padding: 5px 20px;
+    }
+  }
 }
 
 .content__box {
