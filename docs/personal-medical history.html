@@ -18,6 +18,7 @@
   <script defer src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 
   <script defer src="js/runtime.js"></script>
+  <script defer src="js/datepicker.js"></script>
   <script defer src="js/validation.js"></script>
   <script defer src="js/main.js"></script>
   <script defer src="js/personalAccount.js"></script>
@@ -165,17 +166,17 @@
                   <li class="menu__item">
                     <a href="" class="menu__link active">
                       <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-                        <use xlink:href="assets/img/sprite/sprite.svg#icon-info" />
+                        <use xlink:href="assets/img/sprite/sprite.svg#icon-user" />
                       </svg>
-                      О медицинском учреждении
+                      Личные данные
                     </a>
                   </li>
                   <li class="menu__item">
                     <a href="" class="menu__link">
                       <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-                        <use xlink:href="assets/img/sprite/sprite.svg#icon-doctors" />
+                        <use xlink:href="assets/img/sprite/sprite.svg#icon-info" />
                       </svg>
-                      Врачи
+                      Медицинские учреждения
                     </a>
                   </li>
                   <li class="menu__item">
@@ -183,24 +184,43 @@
                       <svg class="menu__icon" width="30" height="30" aria-hidden="true">
                         <use xlink:href="assets/img/sprite/sprite.svg#icon-services" />
                       </svg>
-                      Запись к врачу
+                      История назначений
                     </a>
                   </li>
                   <li class="menu__item">
                     <a href="" class="menu__link">
                       <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-                        <use xlink:href="assets/img/sprite/sprite.svg#icon-ruble" />
+                        <use xlink:href="assets/img/sprite/sprite.svg#icon-list-b" />
                       </svg>
-                      Услуги
+                      История болезней
                     </a>
                   </li>
                   <li class="menu__item">
                     <a href="" class="menu__link">
                       <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-                        <use xlink:href="assets/img/sprite/sprite.svg#icon-map" />
+                        <use xlink:href="assets/img/sprite/sprite.svg#icon-chat" />
                       </svg>
-                      Местонахождение
+                      Обратная связь
                     </a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="" class="menu__link">
+                      <svg class="menu__icon" width="30" height="30" aria-hidden="true">
+                        <use xlink:href="assets/img/sprite/sprite.svg#icon-list" />
+                      </svg>
+                      Выписка
+                    </a>
+                  </li>
+                  <li class="menu__item">
+                    <form action="">
+                      <input type="hidden" name="_token" value="" />
+                      <button class="menu__link">
+                        <svg class="menu__icon" width="30" height="30" aria-hidden="true">
+                          <use xlink:href="assets/img/sprite/sprite.svg#icon-exit" />
+                        </svg>
+                        Выйти
+                      </button>
+                    </form>
                   </li>
                 </ul><!--/.menu-->
 
@@ -210,7 +230,7 @@
 
             <div class="sCol-lg-8 sCol-xl-9">
 
-              <div class="personal__content content content--hospital-full">
+              <div class="personal__content content content--prescriptions">
 
               </div><!--/.content-->
 

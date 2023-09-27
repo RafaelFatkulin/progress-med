@@ -732,3 +732,67 @@
   <a href="" class="btn btn--transparent">Еще</a>
 </div>
 {{/ifpage}}
+
+{{#ifpage 'personal-medical-history'}}
+<div class="content__box">
+  <h2
+    class="content__title title sFw-500 sFz-18 sFz-lg-20 sText-transform-none"
+  >
+    История болезней
+  </h2>
+
+  <form action="" class="content__form-search sForm" method="post">
+
+    <div class="sForm__inner">
+
+      <div class="sForm__item">
+        <label class="visually-hidden" for="title">Поиск по названию</label>
+        <input class="sForm__input" id="title" type="text" name="title" placeholder="Поиск по названию">
+      </div><!--/.sForm__item-->
+
+      <div class="sForm__item">
+        <div class="sForm__linear sForm__linear--v3">
+          <label class="sForm__label" for="start_date">от</label>
+          <input class="sForm__input js-datepicker" id="start_date" type="text" placeholder="00.00.00" autocomplete="off">
+
+          <label class="sForm__label" for="end_date">до</label>
+          <input class="sForm__input js-datepicker" id="end_date" type="text" name="end_date" placeholder="00.00.00" autocomplete="off">
+        </div>
+      </div><!--/.sForm__item-->
+
+      <div class="sForm__item">
+        <button class="btn btn--primary" type="submit">Вывести</button>
+      </div><!--/.sForm__item-->
+
+    </div><!--/.sForm__inner-->
+
+  </form><!--/.sForm-->
+
+  <div class="table table--odd table--v7">
+    {{#repeat 4}}
+    <div class="table__row">
+      <div class="table__col">
+        ОРВИ
+      </div>
+      <div class="table__col sText-align-center sD-md-block">
+        02.12.24 12:34
+      </div>
+      <div class="table__col sText-align-right">Врач 1</div>
+    </div>
+    <div class="table__row">
+      <div class="table__col">
+        Ангина
+      </div>
+      <div class="table__col sText-align-center sD-md-block">
+        02.12.24 12:34
+      </div>
+      <div class="table__col sText-align-right">Врач 1</div>
+    </div>
+    {{/repeat}}
+  </div>
+
+  <a href="" class="btn btn--transparent">Еще</a>
+</div>
+{{/ifpage}}
+
+
