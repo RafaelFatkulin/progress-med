@@ -186,35 +186,102 @@
 
             <div class="sCol-lg-8 sCol-xl-9">
 
-              <div class="personal__content content content--patient">
+              <div class="personal__content content content--medical-history">
 
-                <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-28 sText-transform-none">Иванов Иван Иванович</h2>
+                <div class="content__box">
+                  <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sText-transform-none">
+                    История болезней
+                  </h2>
 
-                <di class="sForm sForm--confirm">
+                  <form action="" class="content__form-search sForm" method="post">
+                    <div class="sForm__inner">
+                      <div class="sForm__item">
+                        <label class="visually-hidden" for="title">Поиск по названию</label>
+                        <input class="sForm__input" id="title" type="text" name="title" placeholder="Поиск по названию" />
+                      </div>
+                      <!--/.sForm__item-->
 
-                  <div class="sForm__inner sG-row-gap-20">
+                      <div class="sForm__item">
+                        <div class="sForm__linear sForm__linear--v3">
+                          <label class="sForm__label" for="start_date">от</label>
+                          <input class="sForm__input js-datepicker" id="start_date" type="text" placeholder="00.00.00" autocomplete="off" />
 
-                    <div class="sForm__item">
-                      <span class="sForm__label">СНИЛС: 0123456789</span>
+                          <label class="sForm__label" for="end_date">до</label>
+                          <input class="sForm__input js-datepicker" id="end_date" type="text" name="end_date" placeholder="00.00.00" autocomplete="off" />
+                        </div>
+                      </div>
+                      <!--/.sForm__item-->
+
+                      <div class="sForm__item">
+                        <button class="btn btn--primary" type="submit">Вывести</button>
+                      </div>
+                      <!--/.sForm__item-->
                     </div>
+                    <!--/.sForm__inner-->
+                  </form>
+                  <!--/.sForm-->
 
-                    <div class="sForm__item">
-                      <span class="sForm__label">Дата рождения: 01.01.2000</span>
+                  <div class="table table--odd table--v7">
+                    <div class="table__row">
+                      <div class="table__col">ОРВИ</div>
+                      <div class="table__col sText-align-center sD-md-block">
+                        02.12.24 12:34
+                      </div>
+                      <div class="table__col sText-align-right">Врач 1</div>
                     </div>
+                    <div class="table__row">
+                      <div class="table__col">Ангина</div>
+                      <div class="table__col sText-align-center sD-md-block">
+                        02.12.24 12:34
+                      </div>
+                      <div class="table__col sText-align-right">Врач 1</div>
+                    </div>
+                    <div class="table__row">
+                      <div class="table__col">ОРВИ</div>
+                      <div class="table__col sText-align-center sD-md-block">
+                        02.12.24 12:34
+                      </div>
+                      <div class="table__col sText-align-right">Врач 1</div>
+                    </div>
+                    <div class="table__row">
+                      <div class="table__col">Ангина</div>
+                      <div class="table__col sText-align-center sD-md-block">
+                        02.12.24 12:34
+                      </div>
+                      <div class="table__col sText-align-right">Врач 1</div>
+                    </div>
+                    <div class="table__row">
+                      <div class="table__col">ОРВИ</div>
+                      <div class="table__col sText-align-center sD-md-block">
+                        02.12.24 12:34
+                      </div>
+                      <div class="table__col sText-align-right">Врач 1</div>
+                    </div>
+                    <div class="table__row">
+                      <div class="table__col">Ангина</div>
+                      <div class="table__col sText-align-center sD-md-block">
+                        02.12.24 12:34
+                      </div>
+                      <div class="table__col sText-align-right">Врач 1</div>
+                    </div>
+                    <div class="table__row">
+                      <div class="table__col">ОРВИ</div>
+                      <div class="table__col sText-align-center sD-md-block">
+                        02.12.24 12:34
+                      </div>
+                      <div class="table__col sText-align-right">Врач 1</div>
+                    </div>
+                    <div class="table__row">
+                      <div class="table__col">Ангина</div>
+                      <div class="table__col sText-align-center sD-md-block">
+                        02.12.24 12:34
+                      </div>
+                      <div class="table__col sText-align-right">Врач 1</div>
+                    </div>
+                  </div>
 
-                    <div class="sForm__item">
-                      <span class="sForm__label">Возраст: 23 года</span>
-                    </div>
-
-                    <div class="sForm__item">
-                      <span class="sForm__label">Пол: Мужской</span>
-                    </div>
-
-                    <div class="sForm__item">
-                      <span class="sForm__label">Противопоказания: Нет</span>
-                    </div>
-                  </div><!--/.sForm__inner-->
-                </di><!--/.sForm-->
+                  <a href="" class="btn btn--transparent">Еще</a>
+                </div>
 
               </div><!--/.content-->
 
