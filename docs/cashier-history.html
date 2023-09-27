@@ -198,24 +198,20 @@
 
               <div class="personal__content content content--users">
 
-                <!--Список пользователей-->
+                <!--История операций-->
                 <h2 class="content__title title sFw-500 sFz-20 sText-transform-none">
-                  Список пользователей
+                  История операций пользователя
+                  <b>login_polzovatela</b>
                 </h2>
 
-                <form action="" class="content__form-search sForm" method="post">
+                <form action="" class="content__form-search content__form-search--v2 sForm" method="post">
 
                   <div class="sForm__inner">
 
                     <div class="sForm__item">
-                      <label class="visually-hidden" for="personal_account">Поиск по логину или № лицевого счёта</label>
-                      <input class="sForm__input" id="personal_account" type="text" name="personal_account" placeholder="Поиск по логину или № лицевого счёта">
-                    </div><!--/.sForm__item-->
-
-                    <div class="sForm__item">
                       <div class="sForm__linear sForm__linear--v3">
                         <label class="sForm__label" for="start_date">от</label>
-                        <input class="sForm__input js-datepicker" id="start_date" type="text" placeholder="00.00.00" autocomplete="off">
+                        <input class="sForm__input js-datepicker" id="start_date" type="text" name="start_date" placeholder="00.00.00" autocomplete="off">
 
                         <label class="sForm__label" for="end_date">до</label>
                         <input class="sForm__input js-datepicker" id="end_date" type="text" name="end_date" placeholder="00.00.00" autocomplete="off">
@@ -230,179 +226,67 @@
 
                 </form><!--/.sForm-->
 
-                <div class="table table--even table--hover-shadow table--v3">
-
-                  <div class="table__row table__row--header">
-                    <div class="table__col">
-                      <b>Логин</b>
-                    </div>
-                    <div class="table__col">
-                      <b>№лицевого счёта</b>
-                    </div>
-                    <div class="table__col">
-                      <b>Дата регистрации</b>
-                    </div>
-                    <div class="table__col">
-                      <b>Статус учётной записи</b>
-                    </div>
-                  </div><!--/.table__row--header-->
+                <div class="table table--odd table--v1">
 
                   <div class="table__row">
                     <div class="table__col">
-                      <span class="clip" title="login_polzovatela">login_polzovatela</span>
+                      <span class="clip">Списание</span>
                     </div>
+                    <div class="table__col sText-align-center">02.12.24 12:34</div>
+                    <div class="table__col sText-align-right sFz-16 sFw-700 sText-color-danger">-350 Р</div>
+                  </div>
+                  <div class="table__row">
                     <div class="table__col">
-                      <span class="clip" title="4752015698">4752015698</span>
+                      <span class="clip">Списание</span>
                     </div>
-                    <div class="table__col">02.12.24 12:34</div>
-                    <div class="table__col sText-color-danger sFw-600">не активированна</div>
-                    <div class="table__col">
-                      <div class="table__wrapper-btn">
-                        <a class="table__link" href="" title="История операций">
-                          <svg class="table__icon" width="26" height="26" aria-hidden="true">
-                            <use xlink:href="assets/img/sprite/sprite.svg#icon-card-min" />
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div><!--/.table__row-->
+                    <div class="table__col sText-align-center">02.12.24 12:34</div>
+                    <div class="table__col sText-align-right sFz-16 sFw-700 sText-color-danger">-350 Р</div>
+                  </div>
 
                   <div class="table__row">
                     <div class="table__col">
-                      <span class="clip" title="login_polzovatela">login_polzovatela</span>
+                      <span class="clip">Пополнение</span>
                     </div>
-                    <div class="table__col">
-                      <span class="clip" title="4752015698">4752015698</span>
-                    </div>
-                    <div class="table__col">02.12.24 12:34</div>
-                    <div class="table__col sText-color-sm-success sFw-600">активированна</div>
-                    <div class="table__col">
-                      <div class="table__wrapper-btn">
-                        <a class="table__link" href="" title="История операций">
-                          <svg class="table__icon" width="22" height="22" aria-hidden="true">
-                            <use xlink:href="assets/img/sprite/sprite.svg#icon-card-min" />
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div><!--/.table__row-->
+                    <div class="table__col sText-align-center">02.12.24 12:34</div>
+                    <div class="table__col sText-align-right sFz-16 sFw-700 sText-color-success">+2000 Р</div>
+                  </div>
                   <div class="table__row">
                     <div class="table__col">
-                      <span class="clip" title="login_polzovatela">login_polzovatela</span>
+                      <span class="clip">Пополнение</span>
                     </div>
-                    <div class="table__col">
-                      <span class="clip" title="4752015698">4752015698</span>
-                    </div>
-                    <div class="table__col">02.12.24 12:34</div>
-                    <div class="table__col sText-color-danger sFw-600">не активированна</div>
-                    <div class="table__col">
-                      <div class="table__wrapper-btn">
-                        <a class="table__link" href="" title="История операций">
-                          <svg class="table__icon" width="26" height="26" aria-hidden="true">
-                            <use xlink:href="assets/img/sprite/sprite.svg#icon-card-min" />
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div><!--/.table__row-->
+                    <div class="table__col sText-align-center">02.12.24 12:34</div>
+                    <div class="table__col sText-align-right sFz-16 sFw-700 sText-color-success">+2000 Р</div>
+                  </div>
 
                   <div class="table__row">
                     <div class="table__col">
-                      <span class="clip" title="login_polzovatela">login_polzovatela</span>
+                      <span class="clip">Списание</span>
                     </div>
-                    <div class="table__col">
-                      <span class="clip" title="4752015698">4752015698</span>
-                    </div>
-                    <div class="table__col">02.12.24 12:34</div>
-                    <div class="table__col sText-color-sm-success sFw-600">активированна</div>
-                    <div class="table__col">
-                      <div class="table__wrapper-btn">
-                        <a class="table__link" href="" title="История операций">
-                          <svg class="table__icon" width="22" height="22" aria-hidden="true">
-                            <use xlink:href="assets/img/sprite/sprite.svg#icon-card-min" />
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div><!--/.table__row-->
+                    <div class="table__col sText-align-center">02.12.24 12:34</div>
+                    <div class="table__col sText-align-right sFz-16 sFw-700 sText-color-danger">-350 Р</div>
+                  </div>
                   <div class="table__row">
                     <div class="table__col">
-                      <span class="clip" title="login_polzovatela">login_polzovatela</span>
+                      <span class="clip">Списание</span>
                     </div>
-                    <div class="table__col">
-                      <span class="clip" title="4752015698">4752015698</span>
-                    </div>
-                    <div class="table__col">02.12.24 12:34</div>
-                    <div class="table__col sText-color-danger sFw-600">не активированна</div>
-                    <div class="table__col">
-                      <div class="table__wrapper-btn">
-                        <a class="table__link" href="" title="История операций">
-                          <svg class="table__icon" width="26" height="26" aria-hidden="true">
-                            <use xlink:href="assets/img/sprite/sprite.svg#icon-card-min" />
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div><!--/.table__row-->
+                    <div class="table__col sText-align-center">02.12.24 12:34</div>
+                    <div class="table__col sText-align-right sFz-16 sFw-700 sText-color-danger">-350 Р</div>
+                  </div>
 
                   <div class="table__row">
                     <div class="table__col">
-                      <span class="clip" title="login_polzovatela">login_polzovatela</span>
+                      <span class="clip">Пополнение</span>
                     </div>
-                    <div class="table__col">
-                      <span class="clip" title="4752015698">4752015698</span>
-                    </div>
-                    <div class="table__col">02.12.24 12:34</div>
-                    <div class="table__col sText-color-sm-success sFw-600">активированна</div>
-                    <div class="table__col">
-                      <div class="table__wrapper-btn">
-                        <a class="table__link" href="" title="История операций">
-                          <svg class="table__icon" width="22" height="22" aria-hidden="true">
-                            <use xlink:href="assets/img/sprite/sprite.svg#icon-card-min" />
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div><!--/.table__row-->
+                    <div class="table__col sText-align-center">02.12.24 12:34</div>
+                    <div class="table__col sText-align-right sFz-16 sFw-700 sText-color-success">+350 Р</div>
+                  </div>
                   <div class="table__row">
                     <div class="table__col">
-                      <span class="clip" title="login_polzovatela">login_polzovatela</span>
+                      <span class="clip">Пополнение</span>
                     </div>
-                    <div class="table__col">
-                      <span class="clip" title="4752015698">4752015698</span>
-                    </div>
-                    <div class="table__col">02.12.24 12:34</div>
-                    <div class="table__col sText-color-danger sFw-600">не активированна</div>
-                    <div class="table__col">
-                      <div class="table__wrapper-btn">
-                        <a class="table__link" href="" title="История операций">
-                          <svg class="table__icon" width="26" height="26" aria-hidden="true">
-                            <use xlink:href="assets/img/sprite/sprite.svg#icon-card-min" />
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div><!--/.table__row-->
-
-                  <div class="table__row">
-                    <div class="table__col">
-                      <span class="clip" title="login_polzovatela">login_polzovatela</span>
-                    </div>
-                    <div class="table__col">
-                      <span class="clip" title="4752015698">4752015698</span>
-                    </div>
-                    <div class="table__col">02.12.24 12:34</div>
-                    <div class="table__col sText-color-sm-success sFw-600">активированна</div>
-                    <div class="table__col">
-                      <div class="table__wrapper-btn">
-                        <a class="table__link" href="" title="История операций">
-                          <svg class="table__icon" width="22" height="22" aria-hidden="true">
-                            <use xlink:href="assets/img/sprite/sprite.svg#icon-card-min" />
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div><!--/.table__row-->
+                    <div class="table__col sText-align-center">02.12.24 12:34</div>
+                    <div class="table__col sText-align-right sFz-16 sFw-700 sText-color-success">+350 Р</div>
+                  </div>
 
                 </div>
 

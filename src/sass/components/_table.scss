@@ -171,8 +171,9 @@
 
 .table__wrapper-btn {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
+  gap: 12px;
 
   padding: 0 0 0 15px;
 }
