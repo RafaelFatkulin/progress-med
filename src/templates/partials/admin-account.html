@@ -166,7 +166,7 @@
 
 </form><!--/.sForm-->
 
-<div class="table table--odd table--v1">
+<div class="table table--odd table--v6">
 
   {{#repeat 2}}
   <div class="table__row">
@@ -174,7 +174,7 @@
       <span class="clip">Списание</span>
     </div>
     <div class="table__col sText-align-center">02.12.24 12:34</div>
-    <div class="table__col sText-align-right sFz-16 sFw-700 sText-color-danger">-350 Р</div>
+    <div class="table__col sText-align-right sFw-700 sText-color-danger">-350 Р</div>
   </div>
   {{/repeat}}
 
@@ -184,7 +184,7 @@
       <span class="clip">Пополнение</span>
     </div>
     <div class="table__col sText-align-center">02.12.24 12:34</div>
-    <div class="table__col sText-align-right sFz-16 sFw-700 sText-color-success">+2000 Р</div>
+    <div class="table__col sText-align-right sFw-700 sText-color-success">+2000 Р</div>
   </div>
   {{/repeat}}
 
@@ -194,7 +194,7 @@
       <span class="clip">Списание</span>
     </div>
     <div class="table__col sText-align-center">02.12.24 12:34</div>
-    <div class="table__col sText-align-right sFz-16 sFw-700 sText-color-danger">-350 Р</div>
+    <div class="table__col sText-align-right sFw-700 sText-color-danger">-350 Р</div>
   </div>
   {{/repeat}}
 
@@ -204,7 +204,7 @@
       <span class="clip">Пополнение</span>
     </div>
     <div class="table__col sText-align-center">02.12.24 12:34</div>
-    <div class="table__col sText-align-right sFz-16 sFw-700 sText-color-success">+350 Р</div>
+    <div class="table__col sText-align-right sFw-700 sText-color-success">+350 Р</div>
   </div>
   {{/repeat}}
 
@@ -382,7 +382,7 @@
     </div><!--/.sForm__item-->
 
     <div class="sForm__item">
-      <div class="sForm__linear sForm__linear--v3 sG-justify-content-left">
+      <div class="sForm__linear sForm__linear--v3 ">
         <label class="sForm__label" for="date_publish">Дата публикации</label>
         <input class="sForm__input js-datepicker" id="date_publish" type="text" name="date_publish" placeholder="00.00.00" autocomplete="off" required>
 
@@ -391,8 +391,8 @@
       </div>
     </div><!--/.sForm__item-->
 
-    <div class="sForm__item sForm__item--column-6">
-      <div class="sForm__linear sForm__linear--v4 sG-justify-content-left sP-relative">
+    <div class="sForm__item">
+      <div class="sForm__linear sForm__linear--v4 sP-relative">
         <label class="sForm__label" for="type_news">Тип новости</label>
         <select class="sForm__select js-select2" name="type_news" id="type_news" required>
           <option value=""></option>
@@ -403,9 +403,9 @@
       </div>
     </div><!--/.sForm__item-->
 
-    <div class="sForm__item sForm__item--column-4">
-      <div class="sForm__linear sForm__linear--v5 sG-justify-content-left">
-        <label class="visually-hidden" for="date_edit">Дата редактирования</label>
+    <div class="sForm__item">
+      <div class="sForm__linear sForm__linear--v5">
+        <label class="sForm__label" for="date_edit">Дата редактирования</label>
         <input class="sForm__input js-datepicker" id="date_edit" type="text" name="date_edit" placeholder="00.00.00" autocomplete="off" required>
 
         <label class="sForm__label" for="time_edit">время</label>
@@ -429,7 +429,7 @@
     </div><!--/.sForm__item-->
 
     <div class="sForm__item">
-      <div class="sForm__linear sForm__linear--v6 sG-justify-content-space-between">
+      <div class="sForm__linear sForm__linear--v6 sG-justify-content-space-between sForm__buttons">
         <button class="btn btn--primary" type="submit">Сохранить изменения</button>
         <a class="btn btn--primary" href="">Отмена</a>
       </div>
@@ -457,7 +457,7 @@
     </div><!--/.sForm__item-->
 
     <div class="sForm__item">
-      <div class="sForm__linear sForm__linear--v3 sG-justify-content-left">
+      <div class="sForm__linear sForm__linear--v3">
         <label class="sForm__label" for="date_publish">Дата публикации</label>
         <input class="sForm__input js-datepicker" id="date_publish" type="text" name="date_publish" placeholder="00.00.00" required>
 
@@ -466,8 +466,8 @@
       </div>
     </div><!--/.sForm__item-->
 
-    <div class="sForm__item sForm__item--column-6">
-      <div class="sForm__linear sForm__linear--v4 sG-justify-content-left sP-relative">
+    <div class="sForm__item">
+      <div class="sForm__linear sForm__linear--v4 sP-relative">
         <label class="sForm__label" for="type_news">Тип новости</label>
         <select class="sForm__select js-select2" name="type_news" id="type_news" required>
           <option value=""></option>
@@ -478,9 +478,9 @@
       </div>
     </div><!--/.sForm__item-->
 
-    <div class="sForm__item sForm__item--column-4">
-      <div class="sForm__linear sForm__linear--v5 sG-justify-content-left">
-        <label class="visually-hidden" for="date_edit">Дата публикации</label>
+    <div class="sForm__item">
+      <div class="sForm__linear sForm__linear--v5">
+        <label class="sForm__label" for="date_edit">Дата публикации</label>
         <input class="sForm__input js-datepicker" id="date_edit" type="text" name="date_edit" placeholder="00.00.00" required>
 
         <label class="sForm__label" for="time_edit">время</label>
@@ -503,12 +503,12 @@
     </div><!--/.sForm__item-->
 
     <div class="sForm__item">
-      <label class="visually-hidden" for="news_text">Описаение новости</label>
+      <label class="visually-hidden" for="news_text">Описание новости</label>
       <textarea class="sForm__textarea" id="news_text" name="news_text" required>Описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости описание новости</textarea>
     </div><!--/.sForm__item-->
 
     <div class="sForm__item">
-      <div class="sForm__linear sForm__linear--v6 sG-justify-content-space-between">
+      <div class="sForm__linear sForm__linear--v6 sG-justify-content-space-between sForm__buttons">
         <button class="btn btn--primary" type="submit">Сохранить изменения</button>
         <a class="btn btn--primary" href="">Отмена</a>
       </div>
@@ -542,26 +542,26 @@
 
 </form><!--/.sForm-->
 
-<div class="table table--even table--hover-shadow table--v5">
+<div class="table table--even table--hover-shadow table--v8">
 
   <div class="table__row table__row--header">
     <div class="table__col">
       <b>Название</b>
     </div>
     <div class="table__col">
-      <b>Последнее редактировние</b>
+      <b>Последнее редактирование</b>
     </div>
   </div><!--/.table__row--header-->
 
   {{#repeat 4}}
   <div class="table__row">
     <div class="table__col">
-      <span class="clip" title="О нас">О нас</span>
+      О нас
     </div>
     <div class="table__col sText-align-center sPr-16">02.12.24 12:34</div>
     <div class="table__col">
       <div class="table__wrapper-btn sF-justify-content-end">
-        <a class="table__link sMr-10" href="" title="Редактировать страницу">
+        <a class="table__link" href="" title="Редактировать страницу">
           <svg class="table__icon" width="26" height="26" aria-hidden="true">
             <use xlink:href="assets/img/sprite/sprite.svg#icon-edit-min"/>
           </svg>
@@ -577,12 +577,12 @@
 
   <div class="table__row">
     <div class="table__col">
-      <span class="clip" title="Платежи через сайт">Платежи через сайт</span>
+      Платежи через сайт
     </div>
     <div class="table__col sText-align-center sPr-16">02.12.24 12:34</div>
     <div class="table__col">
       <div class="table__wrapper-btn sF-justify-content-end">
-        <a class="table__link sMr-10" href="" title="Редактировать страницу">
+        <a class="table__link" href="" title="Редактировать страницу">
           <svg class="table__icon" width="26" height="26" aria-hidden="true">
             <use xlink:href="assets/img/sprite/sprite.svg#icon-edit-min"/>
           </svg>
@@ -636,7 +636,7 @@
     </div><!--/.sForm__item-->
 
     <div class="sForm__item">
-      <div class="sForm__linear sForm__linear--v6 sG-justify-content-space-between">
+      <div class="sForm__linear sForm__linear--v6 sForm__buttons">
         <button class="btn btn--primary" type="submit">Сохранить изменения</button>
         <a class="btn btn--primary" href="">Отмена</a>
       </div>

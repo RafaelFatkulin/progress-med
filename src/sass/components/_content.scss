@@ -11,6 +11,9 @@
   }
 
   &--data {
+    .sForm__item > .btn {
+      width: 100%;
+    }
   }
 
   &--hospitals-list {
@@ -43,27 +46,196 @@
   }
 
   &--record {
+    .record-input {
+      flex-direction: column;
+
+      @include m.media("sm") {
+        flex-direction: row;
+      }
+
+      &---personal {
+        flex-direction: row;
+      }
+    }
   }
 
   &--users {
   }
 
   &--history {
+    .sForm__inner {
+      grid-template-columns: 1fr;
+    }
+
+    .sForm__linear {
+      grid-template-columns: auto 1fr;
+    }
+
+    .sForm__item > .btn {
+      width: 100%;
+    }
+
+    @include m.media("sm") {
+      .sForm__linear {
+        grid-template-columns: auto 1fr auto 1fr;
+      }
+    }
+
+    @include m.media("md") {
+      .sForm__inner {
+        grid-template-columns: auto auto;
+      }
+
+      .sForm__linear {
+        grid-template-columns: auto 120px auto 120px;
+      }
+
+      .sForm__item > .btn {
+        width: fit-content;
+      }
+    }
   }
 
   &--edit-user {
+    .btn {
+      width: 100%;
+
+      @include m.media("sm") {
+        width: fit-content;
+      }
+    }
   }
 
-  &--news {
+  &--news,
+  &--users {
+    .sForm__inner {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .sForm__linear {
+      grid-template-columns: auto 1fr;
+    }
+
+    .sForm__item > .btn {
+      width: 100%;
+    }
+
+    @include m.media("sm") {
+      .sForm__linear {
+        grid-template-columns: auto 1fr auto 1fr;
+      }
+    }
+
+    @include m.media("xl") {
+      .sForm__inner {
+        grid-template-columns: 1fr 1fr auto;
+      }
+
+      .sForm__linear {
+        grid-template-columns: auto 1fr auto 1fr;
+      }
+
+      .sForm__item > .btn {
+        width: fit-content;
+      }
+    }
+
+    .table {
+      overflow-x: auto;
+      max-width: calc(100vw - 20px);
+
+      &__row {
+        width: max-content;
+      }
+    }
   }
 
-  &--add-news {
+  &--add-news,
+  &--edit-news,
+  &--edit-page {
+    .sForm__linear {
+      grid-template-columns: 1fr;
+      width: 100%;
+    }
+
+    @include m.media(320) {
+      .sForm__linear {
+        grid-template-columns: auto auto;
+
+        &--v4 {
+          // width: 100%;
+          grid-template-columns: auto 1fr;
+        }
+      }
+
+      .sForm__buttons {
+        grid-template-columns: 1fr;
+        grid-gap: 12px;
+      }
+    }
+
+    @include m.media("sm") {
+      .sForm__linear {
+        grid-template-columns: auto 1fr auto 1fr;
+      }
+
+      .sForm__buttons {
+        grid-template-columns: auto auto !important;
+        width: 100% !important;
+        grid-gap: 20px;
+      }
+    }
+
+    @include m.media("md") {
+      .sForm__linear {
+        grid-template-columns: auto 103px auto 103px;
+        width: fit-content;
+
+        &--v4 {
+          // width: 100%;
+          grid-template-columns: auto 300px;
+        }
+      }
+    }
   }
 
   &--edit-news {
   }
 
   &--page {
+    .sForm__inner {
+      grid-template-columns: 1fr;
+      grid-gap: 12px;
+    }
+
+    .sForm__linear {
+      grid-template-columns: auto 1fr;
+    }
+
+    .sForm__item > .btn {
+      width: 100%;
+    }
+
+    @include m.media("sm") {
+      .sForm__linear {
+        grid-template-columns: auto 1fr auto 1fr;
+      }
+    }
+
+    @include m.media("md") {
+      .sForm__inner {
+        grid-template-columns: 360px auto;
+      }
+
+      .sForm__linear {
+        grid-template-columns: auto 120px auto 120px;
+      }
+
+      .sForm__item > .btn {
+        width: fit-content;
+      }
+    }
   }
 
   &--edit-page {
@@ -191,6 +363,18 @@
     .btn--cancel {
       padding: 5px 20px;
     }
+  }
+
+  &--search {
+    .sForm__inner:not(:last-child) {
+      margin-bottom: 20px;
+    }
+    .sForm__item > .btn {
+      width: 100%;
+    }
+  }
+
+  &--patient {
   }
 }
 

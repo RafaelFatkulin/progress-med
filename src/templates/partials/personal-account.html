@@ -1,4 +1,4 @@
-{{#ifpage 'personal-data' 'doctor-data' 'cashier-data'}}
+{{#ifpage 'personal-data' 'doctor-data' 'cashier-data' 'pharmacist-data'}}
 <!--Личные данные-->
 <form action="" class="sForm js-validate" method="post">
   <section class="content__box">
@@ -53,7 +53,7 @@
         />
       </div>
 
-      {{#ifpage 'doctor-data'}}
+      {{#ifpage 'doctor-data' 'pharmacist-data'}}
       <div class="sForm__item sForm__item--column-lg-6">
         <label class="visually-hidden" for="city">Город</label>
         <input
@@ -685,7 +685,7 @@
   <h2
     class="content__title title sFw-500 sFz-18 sFz-lg-20 sText-transform-none"
   >
-    История назначения
+    История назначений
   </h2>
 
   <form action="" class="content__form-search sForm" method="post">
@@ -927,4 +927,78 @@
   </form>
   <!--/.sForm-->
 </div>
+{{/ifpage}}
+
+{{#ifpage 'pharmacist-search'}}
+<form action="" class="sForm js-validate" method="post">
+  <section class="content__box">
+    <h2
+      class="content__title title sFw-500 sFz-18 sFz-lg-20 sText-transform-none"
+    >
+      Поиск пациента
+    </h2>
+
+    <div class="sForm__inner sG-row-gap-20 sG-column-gap-20">
+      <div class="sForm__item sForm__item--column-lg-6">
+        <label class="visually-hidden" for="fullname">ФИО</label>
+        <input
+          class="sForm__input"
+          id="fullname"
+          type="text"
+          name="fullname
+          fullname"
+          placeholder="ФИО"
+        />
+      </div>
+
+      <div class="sForm__item sForm__item--column-lg-6">
+        <label class="visually-hidden" for="snils">СНИЛС</label>
+        <input
+          class="sForm__input"
+          id="snils"
+          type="text"
+          name="snils"
+          placeholder="СНИЛС"
+        />
+      </div>
+    </div>
+
+    <div class="sForm__inner">
+      <div class="sForm__item sForm__item--column-lg-6">
+        <button class="btn btn--primary" type="submit">Найти</button>
+      </div>
+    </div>
+  </section>
+  <!--/.content__box-->
+</form>
+{{/ifpage}}
+
+{{#ifpage 'pharmacist-patient'}}
+<h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-28 sText-transform-none">Иванов Иван Иванович</h2>
+
+  <di class="sForm sForm--confirm">
+
+    <div class="sForm__inner sG-row-gap-20">
+
+      <div class="sForm__item">
+        <span class="sForm__label">СНИЛС: 0123456789</span>
+      </div>
+
+      <div class="sForm__item">
+        <span class="sForm__label">Дата рождения: 01.01.2000</span>
+      </div>
+
+      <div class="sForm__item">
+        <span class="sForm__label">Возраст: 23 года</span>
+      </div>
+
+      <div class="sForm__item">
+        <span class="sForm__label">Пол: Мужской</span>
+      </div>
+
+      <div class="sForm__item">
+        <span class="sForm__label">Противопоказания: Нет</span>
+      </div>
+    </div><!--/.sForm__inner-->
+  </di><!--/.sForm-->
 {{/ifpage}}

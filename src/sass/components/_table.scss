@@ -134,6 +134,17 @@
       }
     }
   }
+
+  &--v8 {
+    .table__row {
+      grid-template-columns: 4fr 3fr 2fr;
+      grid-column-gap: 6px;
+
+      @include m.media("md") {
+        grid-template-columns: 50% 34% 12%;
+      }
+    }
+  }
 }
 
 .table__row {
@@ -167,6 +178,12 @@
 
 .table__col {
   overflow: hidden;
+  font-size: 12px;
+  hyphens: auto;
+
+  @include m.media("sm") {
+    font-size: 14px;
+  }
 }
 
 .table__wrapper-btn {

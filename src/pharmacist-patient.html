@@ -1,16 +1,16 @@
 ---
-layout: admin
+layout: default
 
-title: Редактирование блока | Кабинет главврача
-description: Описания редактирование новости
+title: Иванов Иван Иванович | Кабинет фармацевта
+description: Описание страницы пациента
 
 link: style.min.css
-script: ['runtime.js', 'select2.js', 'datepicker.js', 'main.js', 'adminAccount.js']
+script: ['runtime.js', 'validation.js', 'main.js', 'personalAccount.js']
 
 lottiePlayer: false
 ---
 
-{{> header-registry}}
+{{> header}}
 
 <main>
 
@@ -20,7 +20,7 @@ lottiePlayer: false
 
       <div class="personal__inner">
 
-        <h1 class="personal__title title">Кабинет главврача</h1>
+        <h1 class="personal__title title">Кабинет фармацевта</h1>
 
         <div class="sRow">
 
@@ -28,7 +28,7 @@ lottiePlayer: false
 
             <aside class="personal__sidebar sidebar">
 
-              {{> sidebar-menu-registry}}
+              {{> sidebar-menu-pharmacist-patient}}
 
             </aside><!--/.sidebar-->
 
@@ -36,9 +36,9 @@ lottiePlayer: false
 
           <div class="sCol-lg-8 sCol-xl-9">
 
-            <div class="personal__content content content--edit-news">
+            <div class="personal__content content content--patient">
 
-              {{> admin-account}}
+              {{> personal-account}}
 
             </div><!--/.content-->
 
@@ -53,5 +53,4 @@ lottiePlayer: false
 
 </main>
 
-{{> footer-admin}}
-
+{{> footer}}
