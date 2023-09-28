@@ -1,6 +1,6 @@
 {{#ifpage 'personal-record-department' 'cashier-record-department' 'doctor-patient-record-department'}}
 <!--Выбертие отделение-->
-<h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-10 sText-transform-none">Запись к врачу</h2>
+<h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-20 sText-transform-none">Запись к врачу</h2>
 
 <ul class="content__breadcrumbs breadcrumbs">
   <li class="breadcrumbs__item">
@@ -25,7 +25,7 @@
 
 {{#ifpage 'personal-record-service' 'cashier-record-service' 'doctor-patient-record-service'}}
 <!--Выбертие услугу-->
-<h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-10 sText-transform-none">Запись к врачу</h2>
+<h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-20 sText-transform-none">Запись к врачу</h2>
 
 <ul class="content__breadcrumbs breadcrumbs">
   <li class="breadcrumbs__item">
@@ -50,7 +50,7 @@
 
 {{#ifpage 'personal-record-doctor' 'cashier-record-doctor' 'doctor-patient-record-doctor'}}
 <!--Выбертие врача-->
-<h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-10 sText-transform-none">Запись к врачу</h2>
+<h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-20 sText-transform-none">Запись к врачу</h2>
 
 <ul class="content__breadcrumbs breadcrumbs">
   <li class="breadcrumbs__item">
@@ -76,17 +76,21 @@
 
 
 
-{{#ifpage 'personal-record-date' 'doctor-record-date' 'cashier-record-date' 'doctor-patient-record-date'}}
+{{#ifpage 'personal-record-date' 'doctor-record-date' 'cashier-record-date' 'doctor-patient-record-date' 'registry-doctor-record-date'}}
 <!--Выбертие дату-->
-{{#unlesspage 'doctor-record-date'}}
-<h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-10 sText-transform-none">Запись к врачу</h2>
+{{#unlesspage 'doctor-record-date' 'registry-doctor-record-date'}}
+<h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-20 sText-transform-none">Запись к врачу</h2>
 {{/unlesspage}}
 
 {{#ifpage 'doctor-record-date'}}
-<h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-10 sText-transform-none">Записи</h2>
+<h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-20 sText-transform-none">Записи</h2>
 {{/ifpage}}
 
-{{#unlesspage 'doctor-record-date'}}
+{{#ifpage 'registry-doctor-record-date'}}
+<h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-20 sText-transform-none">Расписание врача Иванов Иван Иванович</h2>
+{{/ifpage}}
+
+{{#unlesspage 'doctor-record-date' 'registry-doctor-record-date'}}
 <ul class="content__breadcrumbs breadcrumbs">
   <li class="breadcrumbs__item">
     <a class="breadcrumbs__link" href="">Выберите отделение</a>
@@ -103,7 +107,7 @@
 </ul><!--/.breadcrumbs-->
 {{/unlesspage}}
 
-{{#ifpage 'doctor-record-date'}}
+{{#ifpage 'doctor-record-date' 'registry-doctor-record-date'}}
 <ul class="content__breadcrumbs breadcrumbs">
   <li class="breadcrumbs__item">
     Выберите дату
@@ -143,17 +147,21 @@
 
 
 
-{{#ifpage 'personal-record-time' 'doctor-record-time' 'cashier-record-time' 'doctor-patient-record-time'}}
+{{#ifpage 'personal-record-time' 'doctor-record-time' 'cashier-record-time' 'doctor-patient-record-time' 'registry-doctor-record-time'}}
 <!--Выбертие время-->
-{{#unlesspage 'doctor-record-time'}}
-<h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-10 sText-transform-none">Запись к врачу</h2>
+{{#unlesspage 'doctor-record-time' 'registry-doctor-record-time'}}
+<h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-20 sText-transform-none">Запись к врачу</h2>
 {{/unlesspage}}
 
 {{#ifpage 'doctor-record-time'}}
-<h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-10 sText-transform-none">Записи</h2>
+<h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-20 sText-transform-none">Записи</h2>
 {{/ifpage}}
 
-{{#unlesspage 'doctor-record-time'}}
+{{#ifpage 'registry-doctor-record-time'}}
+<h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-20 sText-transform-none">Расписание врача Иванов Иван Иванович</h2>
+{{/ifpage}}
+
+{{#unlesspage 'doctor-record-time' 'registry-doctor-record-time'}}
 <ul class="content__breadcrumbs breadcrumbs">
   <li class="breadcrumbs__item">
     <a class="breadcrumbs__link" href="">Выберите отделение</a>
@@ -173,7 +181,7 @@
 </ul><!--/.breadcrumbs-->
 {{/unlesspage}}
 
-{{#ifpage 'doctor-record-time'}}
+{{#ifpage 'doctor-record-time' 'registry-doctor-record-time'}}
 <ul class="content__breadcrumbs breadcrumbs">
   <li class="breadcrumbs__item">
     <a class="breadcrumbs__link" href="">15.04.2022</a>
@@ -186,10 +194,11 @@
 
 {{#ifpage 'personal-record-time' 'cashier-record-time' 'doctor-patient-record-time'}}
 <div class="table table--hover table--outline table--v2">
-  {{/ifpage}}
-  {{#ifpage 'doctor-record-time'}}
-  <div class="table table--even table--hover table--outline table--v2">
-    {{/ifpage}}
+{{/ifpage}}
+
+{{#ifpage 'doctor-record-time' 'registry-doctor-record-time'}}
+<div class="table table--even table--hover table--outline table--v2">
+{{/ifpage}}
 
     <div class="table__row table__row--header">
       <div class="table__col">
@@ -217,7 +226,7 @@
     {{/repeat}}
     {{/ifpage}}
 
-    {{#ifpage 'doctor-record-time'}}
+    {{#ifpage 'doctor-record-time' 'registry-doctor-record-time'}}
     {{#repeat 2}}
     <a class="table__row" href="">
       <span class="table__col">12:20</span>
@@ -242,15 +251,25 @@
 
 
 
-  {{#ifpage 'personal-record-confirm' 'doctor-record-confirm' 'cashier-record-confirm' 'doctor-patient-record-confirm'}}
+  {{#ifpage 'personal-record-confirm' 'doctor-record-confirm' 'cashier-record-confirm' 'doctor-patient-record-confirm' 'registry-doctor-record-confirm'}}
   <!--Подтвердить запись к врачу-->
-  <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-28 sText-transform-none">Запись к врачу</h2>
+  {{#unlesspage 'doctor-record-confirm' 'registry-doctor-record-confirm'}}
+  <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-20 sText-transform-none">Запись к врачу</h2>
+  {{/unlesspage}}
+
+  {{#ifpage 'doctor-record-confirm'}}
+  <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-20 sText-transform-none">Запись</h2>
+  {{/ifpage}}
+
+  {{#ifpage 'registry-doctor-record-confirm'}}
+  <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-20 sText-transform-none">Запись к врачу Иванов Иван Иванович</h2>
+  {{/ifpage}}
 
   <form action="" class="sForm sForm--confirm" method="post">
 
     <div class="sForm__inner sG-row-gap-20">
 
-      {{#ifpage 'doctor-record-confirm'}}
+      {{#ifpage 'doctor-record-confirm' 'registry-doctor-record-confirm'}}
       <div class="sForm__item">
         <span class="sForm__label sForm__label---link">Пациент: <a href="">Иванов Иван Иванович</a></span>
         <input type="hidden" name="patient" value="Иванов Иван Иванович">

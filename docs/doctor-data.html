@@ -175,7 +175,7 @@
                       <svg class="menu__icon" width="30" height="30" aria-hidden="true">
                         <use xlink:href="assets/img/sprite/sprite.svg#icon-calendar" />
                       </svg>
-                      Мое расписаник
+                      Мое расписание
                     </a>
                   </li>
                   <li class="menu__item">
@@ -251,6 +251,34 @@
                       <div class="sForm__item sForm__item--column-lg-6">
                         <label class="visually-hidden" for="organization">Телефон</label>
                         <input class="sForm__input" id="organization" type="text" name="organization" placeholder="Организация" />
+                      </div>
+
+                      <div class="sForm__item sForm__item--column-lg-12">
+                        <label class="visually-hidden" for="specialization">Специализация</label>
+                        <input class="sForm__input" id="specialization" type="text" name="specialization" placeholder="Специализация" />
+                      </div>
+
+                      <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sM-0 sMt-10 sText-transform-none">
+                        Фотография
+                      </h2>
+
+                      <div class="sForm__item  sForm__item--column-lg-12">
+                        <div class="sForm__file-upload">
+                          <div class="sForm__file-btn">
+                            <button type="button">Choose file</button>
+                            <input class="js-upload" type="file" name="photo__page" required>
+                          </div>
+                          <div class="sForm__file-name">No file chosen</div>
+                        </div>
+                      </div><!--/.sForm__item-->
+
+                      <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sM-0 sMt-10 sText-transform-none">
+                        Обо мне
+                      </h2>
+
+                      <div class="sForm__item sForm__item--column-lg-12">
+                        <label class="visually-hidden" for="about_me">Обо мне</label>
+                        <textarea class="sForm__textarea" id="about_me" type="text" name="about_me" placeholder="Обо мне"></textarea>
                       </div>
                     </div>
                   </section>

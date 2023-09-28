@@ -646,3 +646,102 @@
 
 </form><!--/.sForm-->
 {{/ifpage}}
+
+{{#ifpage 'registry-doctors'}}
+<!--Медицинские учреждения-->
+<div class="content__box">
+  <h2
+    class="content__title title sFw-500 sFz-18 sFz-lg-20 sText-transform-none"
+  >
+    Список врачей
+  </h2>
+
+  <form
+    action=""
+    class="content__form-search content__form-search--v4 sForm"
+    method="post"
+  >
+    <div class="sForm__inner">
+      <div class="sForm__item">
+        <label class="visually-hidden" for="full_name">Поиск по имени</label>
+        <input
+          class="sForm__input"
+          id="full_name"
+          type="text"
+          name="full_name"
+          placeholder="Поиск по имени"
+        />
+      </div>
+      <!--/.sForm__item-->
+
+      <div class="sForm__item">
+        <label class="visually-hidden" for="specialization"
+          >Поиск по специализации</label
+        >
+        <input
+          class="sForm__input"
+          id="specialization"
+          type="text"
+          name="specialization"
+          placeholder="Поиск по специализации"
+        />
+      </div>
+      <!--/.sForm__item-->
+
+      <div class="sForm__item">
+        <button class="btn btn--primary" type="submit">Вывести</button>
+      </div>
+      <!--/.sForm__item-->
+    </div>
+    <!--/.sForm__inner-->
+  </form>
+  <!--/.sForm-->
+
+  <div class="table table--even table--hover-shadow table--v9">
+
+    <div class="table__row table__row--header">
+      <div class="table__col">
+        <b>ФИО</b>
+      </div>
+      <div class="table__col">
+        <b>Специализация</b>
+      </div>
+    </div><!--/.table__row--header-->
+
+
+    {{#repeat 4}}
+    <div class="table__row">
+      <div class="table__col">
+        <span title="Иванов Иван Иванович">Иванов Иван Иванович</span>
+      </div>
+      <div class="table__col">
+        <span title="Терапия">Терапия</span>
+      </div>
+      <div class="table__col">
+        <div class="table__wrapper-btn">
+          <a class="table__link" href="" title="Профиль">
+            <svg class="table__icon" width="26" height="26" aria-hidden="true">
+              <use xlink:href="assets/img/sprite/sprite.svg#icon-edit-min"/>
+            </svg>
+          </a>
+          <a class="table__link" href="" title="Настройки">
+            <svg class="table__icon" width="26" height="26" aria-hidden="true">
+              <use xlink:href="assets/img/sprite/sprite.svg#icon-settings-min"/>
+            </svg>
+          </a>
+          <a class="table__link" href="" title="Расписание">
+            <svg class="table__icon" width="26" height="26" aria-hidden="true">
+              <use xlink:href="assets/img/sprite/sprite.svg#icon-card-min"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div><!--/.table__row-->
+    {{/repeat}}
+
+  </div>
+
+  <a href="" class="btn btn--transparent">Еще</a>
+</div>
+<!--/.content__box-->
+{{/ifpage}}

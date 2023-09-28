@@ -145,6 +145,25 @@
       }
     }
   }
+
+  &--v9 {
+    .table__row {
+      grid-template-columns: 3fr 2fr 2fr;
+      grid-column-gap: 6px;
+
+      .table__wrapper-btn {
+        gap: 6px;
+      }
+
+      @include m.media("sm") {
+        grid-template-columns: 50% 25% 22%;
+
+        .table__wrapper-btn {
+          gap: 12px;
+        }
+      }
+    }
+  }
 }
 
 .table__row {

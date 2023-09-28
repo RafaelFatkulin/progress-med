@@ -1,4 +1,4 @@
-{{#ifpage 'personal-data' 'doctor-data' 'cashier-data' 'pharmacist-data'}}
+{{#ifpage 'personal-data' 'doctor-data' 'cashier-data' 'pharmacist-data' }}
 <!--Личные данные-->
 <form action="" class="sForm js-validate" method="post">
   <section class="content__box">
@@ -76,6 +76,52 @@
         />
       </div>
       {{/ifpage}}
+
+      {{#ifpage 'doctor-data'}}
+      <div class="sForm__item sForm__item--column-lg-12">
+        <label class="visually-hidden" for="specialization">Специализация</label>
+        <input
+          class="sForm__input"
+          id="specialization"
+          type="text"
+          name="specialization"
+          placeholder="Специализация"
+        />
+      </div>
+
+      <h2
+      class="content__title title sFw-500 sFz-18 sFz-lg-20 sM-0 sMt-10 sText-transform-none"
+    >
+      Фотография
+    </h2>
+
+      <div class="sForm__item  sForm__item--column-lg-12">
+        <div class="sForm__file-upload">
+          <div class="sForm__file-btn">
+            <button type="button">Choose file</button>
+            <input class="js-upload" type="file" name="photo__page" required>
+          </div>
+          <div class="sForm__file-name">No file chosen</div>
+        </div>
+      </div><!--/.sForm__item-->
+
+      <h2
+      class="content__title title sFw-500 sFz-18 sFz-lg-20 sM-0 sMt-10 sText-transform-none"
+    >
+      Обо мне
+    </h2>
+
+      <div class="sForm__item sForm__item--column-lg-12">
+        <label class="visually-hidden" for="about_me">Обо мне</label>
+        <textarea
+          class="sForm__textarea"
+          id="about_me"
+          type="text"
+          name="about_me"
+          placeholder="Обо мне"
+        ></textarea>
+      </div>
+      {{/ifpage}}
     </div>
   </section>
   <!--/.content__box-->
@@ -110,6 +156,79 @@
           name="repeat_password"
           placeholder="Повторите пароль"
         />
+      </div>
+    </div>
+  </section>
+  <!--/.content__box-->
+
+  <div class="sForm__inner">
+    <div class="sForm__item sForm__item--column-lg-6">
+      <button class="btn btn--primary" type="submit">Сохранить</button>
+    </div>
+  </div>
+</form>
+<!--/.sForm-->
+{{/ifpage}}
+
+{{#ifpage 'registry-edit-doctor'}}
+<!--Личные данные врача-->
+<form action="" class="sForm js-validate" method="post">
+  <section class="content__box">
+    <h2
+      class="content__title title sFw-500 sFz-18 sFz-lg-20 sText-transform-none"
+    >
+      Личные данные врача
+    </h2>
+
+    <div class="sForm__inner sG-row-gap-20 sG-column-gap-20">
+      <div class="sForm__item sForm__item--column-lg-6">
+        <label class="visually-hidden" for="name">Имя</label>
+        <input
+          class="sForm__input"
+          id="name"
+          type="text"
+          name="name"
+          placeholder="Имя"
+        />
+      </div>
+
+      <div class="sForm__item sForm__item--column-lg-6">
+        <label class="visually-hidden" for="family">Фамилия</label>
+        <input
+          class="sForm__input"
+          id="family"
+          type="text"
+          name="family"
+          placeholder="Фамилия"
+        />
+      </div>
+
+      <div class="sForm__item sForm__item--column-lg-12">
+        <label class="visually-hidden" for="specialization">Специализация</label>
+        <input
+          class="sForm__input"
+          id="specialization"
+          type="text"
+          name="specialization"
+          placeholder="Специализация"
+        />
+      </div>
+
+      <h2
+      class="content__title title sFw-500 sFz-18 sFz-lg-20 sM-0 sMt-10 sText-transform-none"
+    >
+      Обо мне
+    </h2>
+
+      <div class="sForm__item sForm__item--column-lg-12">
+        <label class="visually-hidden" for="about_me">Обо мне</label>
+        <textarea
+          class="sForm__textarea"
+          id="about_me"
+          type="text"
+          name="about_me"
+          placeholder="Обо мне"
+        ></textarea>
       </div>
     </div>
   </section>
@@ -1183,4 +1302,68 @@
     </section>
     <!--/.content__box-->
   </form>
+{{/ifpage}}
+
+
+{{#ifpage 'registry-doctor-schedule'}}
+<form action="" class="sForm js-validate" method="post">
+  <section class="content__box">
+    <h2
+      class="content__title title sFw-500 sFz-18 sFz-lg-20 sText-transform-none"
+    >
+      Расписание врача Иванов Иван Иванович
+    </h2>
+
+    <label class="schedule-checkbox">
+      <input type="checkbox" name="checkbox" />
+      Понедельник
+    </label>
+
+    <label class="schedule-checkbox">
+      <input type="checkbox" name="checkbox" />
+      Вторник
+    </label>
+
+    <label class="schedule-checkbox">
+      <input type="checkbox" name="checkbox" />
+      Среда
+    </label>
+
+    <label class="schedule-checkbox">
+      <input type="checkbox" name="checkbox" />
+      Четверг
+    </label>
+
+    <label class="schedule-checkbox">
+      <input type="checkbox" name="checkbox" />
+      Пятница
+    </label>
+
+    <label class="schedule-checkbox">
+      <input type="checkbox" name="checkbox" />
+      Суббота
+    </label>
+
+    <label class="schedule-checkbox">
+      <input type="checkbox" name="checkbox" />
+      Воскресенье
+    </label>
+
+    <div class="sForm__item record-input">
+      <span class="sForm__label">Время работы:</span>
+      <span class="sForm__label">от</span>
+      <input type="time" name="start_time" >
+      <span class="sForm__label">до</span>
+      <input type="time" name="end_time" >
+    </div>
+
+    <div class="sForm__item">
+      <div class="sForm__linear sForm__linear--v6 sG-justify-content-space-between sForm__buttons">
+        <button class="btn btn--primary" type="submit">Сохранить изменения</button>
+        <a class="btn btn--primary" href="">Отмена</a>
+      </div>
+    </div><!--/.sForm__item-->
+  </section>
+  <!--/.content__box-->
+</form>
 {{/ifpage}}
