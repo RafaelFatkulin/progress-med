@@ -10,10 +10,8 @@
  */
 
 @mixin button($prefix: v.$prefix) {
-
   .#{$prefix}Btn {
-
-    @include btn(v.$primary, v.$white){
+    @include btn(v.$primary, v.$white) {
       display: inline-block;
       vertical-align: middle;
 
@@ -42,10 +40,10 @@
       cursor: pointer;
 
       transition: all 0.2s ease;
-    };
+    }
 
     &-primary {
-      @include btn(v.$primary, v.$white){
+      @include btn(v.$primary, v.$white) {
         background-color: v.$primary;
         border-color: v.$primary;
         color: #fff;
@@ -53,7 +51,7 @@
     }
 
     &-success {
-      @include btn(v.$success, v.$white){
+      @include btn(v.$success, v.$white) {
         background-color: v.$success;
         border-color: v.$success;
         color: #fff;
@@ -61,7 +59,7 @@
     }
 
     &-danger {
-      @include btn(v.$danger, v.$white){
+      @include btn(v.$danger, v.$white) {
         background-color: v.$danger;
         border-color: v.$danger;
         color: #fff;
@@ -69,7 +67,7 @@
     }
 
     &-warning {
-      @include btn(v.$warning, v.$white){
+      @include btn(v.$warning, v.$white) {
         background-color: v.$warning;
         border-color: v.$warning;
         color: #fff;
@@ -77,7 +75,7 @@
     }
 
     &-dark {
-      @include btn(v.$dark, v.$white){
+      @include btn(v.$dark, v.$white) {
         background-color: v.$dark;
         border-color: v.$dark;
         color: #fff;
@@ -85,46 +83,44 @@
     }
 
     &-outline-primary {
-      @include btn(v.$primary, v.$white){
+      @include btn(v.$primary, v.$white) {
         border-color: v.$primary;
         color: v.$primary;
       }
     }
 
     &-outline-success {
-      @include btn(v.$success, v.$white){
+      @include btn(v.$success, v.$white) {
         border-color: v.$success;
         color: v.$success;
       }
     }
 
     &-outline-danger {
-      @include btn(v.$danger, v.$white){
+      @include btn(v.$danger, v.$white) {
         border-color: v.$danger;
         color: v.$danger;
       }
     }
 
     &-outline-warning {
-      @include btn(v.$warning, v.$white){
+      @include btn(v.$warning, v.$white) {
         border-color: v.$warning;
         color: v.$warning;
       }
     }
 
     &-outline-dark {
-      @include btn(v.$dark, v.$white){
+      @include btn(v.$dark, v.$white) {
         border-color: v.$dark;
         color: v.$dark;
       }
     }
   }
-
 }
 
 // создание кнопки
 @mixin btn($bg-color, $txt-color) {
-
   @content;
 
   &:hover {
@@ -145,5 +141,4 @@
     background-color: $bg-color;
     color: $txt-color;
   }
-
 }

@@ -35,6 +35,8 @@
   }
 
   &--confirm {
+    margin-bottom: 40px;
+
     .#{v.$prefix}Form__label {
       margin-bottom: 0;
 
@@ -379,6 +381,14 @@
     align-items: center;
 
     grid-template-columns: auto auto;
+  }
+
+  &--v7 {
+    grid-template-columns: 1fr;
+
+    @include m.media("sm") {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 }
 

@@ -6,22 +6,21 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <title>Список пользователей | Кабинет администратора</title>
+  <title>Запись | Личный кабинет Доктора</title>
 
-  <meta name="viewport" content="width=1220, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta name="author" content="Abraklion">
-  <meta name="description" content="Описания список пользователей">
+  <meta name="description" content="Описание запись">
 
   <link rel="stylesheet" href="assets/css/style.min.css">
 
   <script defer src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 
   <script defer src="js/runtime.js"></script>
-  <script defer src="js/select2.js"></script>
-  <script defer src="js/datepicker.js"></script>
+  <script defer src="js/validation.js"></script>
   <script defer src="js/main.js"></script>
-  <script defer src="js/adminAccount.js"></script>
+  <script defer src="js/personalAccount.js"></script>
 </head>
 
 <body class="page__body">
@@ -57,6 +56,33 @@
                   <div class="navigation__menu-inner">
 
                     <h2 class="navigation__title title">Меню</h2>
+
+                    <ul class="navigation__menu menu menu--icon sMb-32 sD-lg-none">
+                      <li class="menu__item">
+                        <a href="" class="menu__link active">
+                          <svg class="menu__icon" width="30" height="30" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-user" />
+                          </svg>
+                          Личные данные
+                        </a>
+                      </li>
+                      <li class="menu__item">
+                        <a href="" class="menu__link">
+                          <svg class="menu__icon" width="30" height="30" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-card" />
+                          </svg>
+                          Записи
+                        </a>
+                      </li>
+                      <li class="menu__item">
+                        <a href="" class="menu__link">
+                          <svg class="menu__icon" width="30" height="30" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-list" />
+                          </svg>
+                          Выписка
+                        </a>
+                      </li>
+                    </ul><!--/.menu-->
 
                     <ul class="navigation__menu menu">
                       <li class="menu__item">
@@ -127,19 +153,19 @@
 
         <div class="personal__inner">
 
-          <h1 class="personal__title title">Кабинет кассира</h1>
+          <h1 class="personal__title title">Кабинет врача</h1>
 
           <div class="sRow">
 
-            <div class="sCol-3">
+            <div class="sCol-lg-4 sCol-xl-3 sD-none sD-lg-block">
 
               <aside class="personal__sidebar sidebar">
 
                 <ul class="sidebar__menu menu--icon menu">
                   <li class="menu__item">
-                    <a href="" class="menu__link ">
+                    <a href="" class="menu__link active">
                       <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-                        <use xlink:href="assets/img/sprite/sprite.svg#icon-info" />
+                        <use xlink:href="assets/img/sprite/sprite.svg#icon-user" />
                       </svg>
                       Личные данные
                     </a>
@@ -147,33 +173,25 @@
                   <li class="menu__item">
                     <a href="" class="menu__link">
                       <svg class="menu__icon" width="30" height="30" aria-hidden="true">
+                        <use xlink:href="assets/img/sprite/sprite.svg#icon-calendar" />
+                      </svg>
+                      Мое расписаник
+                    </a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="" class="menu__link">
+                      <svg class="menu__icon" width="30" height="30" aria-hidden="true">
                         <use xlink:href="assets/img/sprite/sprite.svg#icon-add" />
                       </svg>
-                      Создать пациента
+                      Запись пациента
                     </a>
                   </li>
                   <li class="menu__item">
                     <a href="" class="menu__link">
                       <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-                        <use xlink:href="assets/img/sprite/sprite.svg#icon-schedule" />
+                        <use xlink:href="assets/img/sprite/sprite.svg#icon-check" />
                       </svg>
-                      Запись к врачу
-                    </a>
-                  </li>
-                  <li class="menu__item">
-                    <a href="" class="menu__link">
-                      <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-                        <use xlink:href="assets/img/sprite/sprite.svg#icon-patients" />
-                      </svg>
-                      Список пациентов
-                    </a>
-                  </li>
-                  <li class="menu__item">
-                    <a href="" class="menu__link">
-                      <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-                        <use xlink:href="assets/img/sprite/sprite.svg#icon-list" />
-                      </svg>
-                      Выписки
+                      Выписка
                     </a>
                   </li>
                   <li class="menu__item">
@@ -187,16 +205,36 @@
                       </button>
                     </form>
                   </li>
-                </ul>
-                <!--/.menu-->
+                </ul><!--/.menu-->
 
               </aside><!--/.sidebar-->
 
             </div>
 
-            <div class="sCol-9">
+            <div class="sCol-lg-8 sCol-xl-9">
 
-              <div class="personal__content content content--users">
+              <div class="personal__content content content--record">
+
+                <!--Выбертие отделение-->
+                <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-10 sText-transform-none">Запись к врачу</h2>
+
+                <ul class="content__breadcrumbs breadcrumbs">
+                  <li class="breadcrumbs__item">
+                    Выберите отделение
+                  </li>
+                </ul><!--/.breadcrumbs-->
+
+                <div class="table table--odd table--hover">
+                  <a class="table__row" href="">
+                    <span class="table__col">Терапевтия</span>
+                  </a>
+                  <a class="table__row" href="">
+                    <span class="table__col">Травмпункт</span>
+                  </a>
+                  <a class="table__row" href="">
+                    <span class="table__col">Хирургия</span>
+                  </a>
+                </div><!--/.table-->
 
               </div><!--/.content-->
 
@@ -217,7 +255,7 @@
       <div class="footer__inner">
 
         <a href="" class="footer__logo logo">
-          <img class="logo__img" src="assets/img/logo-footer.svg" width="187" height="21" alt="Логотип MED.PROGRESS">
+          <img class="logo__img" src="assets/img/logo-footer.svg" width="180" height="20" alt="Логотип MED.PROGRESS">
         </a><!--/.logo-->
 
         <ul class="footer__menu menu menu--footer sD-none sD-lg-flex">
@@ -225,16 +263,13 @@
             <a href="" class="menu__link">Главная</a>
           </li>
           <li class="menu__item">
-            <a href="" class="menu__link">Платежи через сайт</a>
+            <a href="" class="menu__link">Сервисы</a>
           </li>
           <li class="menu__item">
             <a href="" class="menu__link">О нас</a>
           </li>
           <li class="menu__item">
-            <a href="" class="menu__link">Политика конфеденциальности</a>
-          </li>
-          <li class="menu__item">
-            <a href="" class="menu__link">Публичная оферта</a>
+            <a href="" class="menu__link">Другие страницы</a>
           </li>
         </ul><!--/.menu-->
 

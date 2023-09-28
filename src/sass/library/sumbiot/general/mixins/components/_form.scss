@@ -9,25 +9,23 @@
   Миксин Фарма
  */
 
-@mixin form($container, $orientation: 'mobile-first', $prefix: v.$prefix) {
-
+@mixin form($container, $orientation: "mobile-first", $prefix: v.$prefix) {
   $z: 0;
-  $route: 'min';
+  $route: "min";
 
-  @if $orientation == 'desktop-first' {
+  @if $orientation == "desktop-first" {
     $z: 1;
-    $route: 'max';
+    $route: "max";
   }
 
   $black: #181818;
   $white: #ffffff;
   $select: #98948a;
 
-  .#{$prefix}Form{
-
+  .#{$prefix}Form {
   }
 
-  .#{$prefix}Form__inner{
+  .#{$prefix}Form__inner {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 
@@ -37,54 +35,43 @@
     & > * {
       grid-column: span 12;
     }
-
   }
 
-  .#{$prefix}Form__item{
-
+  .#{$prefix}Form__item {
     &--column {
       @for $i from 1 through 12 {
-
         &-#{$i} {
           grid-column: span $i;
         }
 
         @each $key, $val in $container {
-
           &-#{$key}-#{$i} {
             @media (#{$route}-width: map.get($val, "breakpoint") - $z) {
               grid-column: span $i;
             }
           }
-
         }
-
       }
     }
 
     &--order {
       @for $i from -1 through 10 {
-
         &-#{$i} {
           order: $i;
         }
 
         @each $key, $val in $container {
-
           &-#{$key}-#{$i} {
             @media (#{$route}-width: map.get($val, "breakpoint") - $z) {
               order: $i;
             }
           }
-
         }
-
       }
     }
-
   }
 
-  .#{$prefix}Form__label{
+  .#{$prefix}Form__label {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -98,9 +85,41 @@
     text-transform: uppercase;
 
     color: color.scale($black, $lightness: 30%);
+
+    &---link {
+      justify-content: flex-start;
+      gap: 12px;
+
+      a {
+        color: #2c3d73;
+        transition: all 0.2s ease;
+
+        &:hover {
+          color: #1d77fa;
+        }
+      }
+    }
+
+    &---status {
+      justify-content: flex-start;
+      gap: 12px;
+
+      .status {
+        font-weight: 700;
+        text-transform: uppercase;
+
+        &-error {
+          color: #e51e2f;
+        }
+
+        &-success {
+          color: #41be94;
+        }
+      }
+    }
   }
 
-  .#{$prefix}Form__input{
+  .#{$prefix}Form__input {
     width: 100%;
 
     position: relative;
@@ -125,16 +144,16 @@
 
     transition: box-shadow 0.3s ease;
 
-    &::placeholder{
+    &::placeholder {
       color: color.scale($black, $lightness: 70%);
 
       transition: color 0.3s ease;
     }
 
-    &:focus{
+    &:focus {
       box-shadow: 0 0 0 2px color.scale($black, $lightness: 85%);
 
-      &::placeholder{
+      &::placeholder {
         color: color.scale($black, $lightness: 0%);
       }
     }
@@ -169,17 +188,16 @@
     //}
   }
 
-  .#{$prefix}Form__checkbox{
+  .#{$prefix}Form__checkbox {
     vertical-align: middle;
 
     cursor: pointer;
   }
 
-  .#{$prefix}Form__button{
-
+  .#{$prefix}Form__button {
   }
 
-  .#{$prefix}Form__error{
+  .#{$prefix}Form__error {
     vertical-align: middle;
 
     padding: 0 8px 0 19px;
@@ -196,5 +214,4 @@
 
     opacity: 0.8;
   }
-
 }

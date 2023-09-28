@@ -1,0 +1,57 @@
+---
+layout: default
+
+title: Иванов Иван Иванович | Личный кабинет
+description: Описание пациента
+
+link: style.min.css
+script: ['runtime.js', 'datepicker.js','validation.js', 'main.js', 'personalAccount.js']
+
+lottiePlayer: false
+---
+
+{{> header-record}}
+
+<main>
+
+  <div class="personal">
+
+    <div class="sContainer">
+
+      <div class="personal__inner sPt-0">
+
+        <h1 class="personal__title title sMt-24 sMt-lg-60 sMt-xl-100">Кабинет врача</h1>
+
+        <div class="sRow">
+
+          <div class="sCol-lg-4 sCol-xl-3 sD-none sD-lg-block">
+
+            <aside class="personal__sidebar sidebar">
+
+              {{> sidebar-menu-doctor}}
+
+            </aside><!--/.sidebar-->
+
+          </div>
+
+          <div class="sCol-lg-8 sCol-xl-9">
+
+            <div class="personal__content content content--add-prescription">
+
+              {{> personal-account}}
+
+            </div><!--/.content-->
+
+          </div>
+
+        </div>
+
+      </div><!--/.personal__inner"-->
+
+    </div><!--/.sContainer-->
+  </div><!--/.personal-->
+
+</main>
+
+{{> footer}}
+

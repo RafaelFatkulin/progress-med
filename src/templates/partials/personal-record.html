@@ -1,4 +1,4 @@
-{{#ifpage 'personal-record-department' 'cashier-record-department'}}
+{{#ifpage 'personal-record-department' 'cashier-record-department' 'doctor-patient-record-department'}}
 <!--Выбертие отделение-->
 <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-10 sText-transform-none">Запись к врачу</h2>
 
@@ -23,7 +23,7 @@
 
 
 
-{{#ifpage 'personal-record-service' 'cashier-record-service'}}
+{{#ifpage 'personal-record-service' 'cashier-record-service' 'doctor-patient-record-service'}}
 <!--Выбертие услугу-->
 <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-10 sText-transform-none">Запись к врачу</h2>
 
@@ -48,7 +48,7 @@
 
 
 
-{{#ifpage 'personal-record-doctor' 'cashier-record-doctor'}}
+{{#ifpage 'personal-record-doctor' 'cashier-record-doctor' 'doctor-patient-record-doctor'}}
 <!--Выбертие врача-->
 <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-10 sText-transform-none">Запись к врачу</h2>
 
@@ -76,7 +76,7 @@
 
 
 
-{{#ifpage 'personal-record-date' 'doctor-record-date' 'cashier-record-date'}}
+{{#ifpage 'personal-record-date' 'doctor-record-date' 'cashier-record-date' 'doctor-patient-record-date'}}
 <!--Выбертие дату-->
 {{#unlesspage 'doctor-record-date'}}
 <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-10 sText-transform-none">Запись к врачу</h2>
@@ -143,7 +143,7 @@
 
 
 
-{{#ifpage 'personal-record-time' 'doctor-record-time' 'cashier-record-time'}}
+{{#ifpage 'personal-record-time' 'doctor-record-time' 'cashier-record-time' 'doctor-patient-record-time'}}
 <!--Выбертие время-->
 {{#unlesspage 'doctor-record-time'}}
 <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-10 sText-transform-none">Запись к врачу</h2>
@@ -184,7 +184,7 @@
 </ul><!--/.breadcrumbs-->
 {{/ifpage}}
 
-{{#ifpage 'personal-record-time' 'cashier-record-time'}}
+{{#ifpage 'personal-record-time' 'cashier-record-time' 'doctor-patient-record-time'}}
 <div class="table table--hover table--outline table--v2">
   {{/ifpage}}
   {{#ifpage 'doctor-record-time'}}
@@ -200,7 +200,7 @@
       </div>
     </div>
 
-    {{#ifpage 'personal-record-time' 'cashier-record-time'}}
+    {{#ifpage 'personal-record-time' 'cashier-record-time' 'doctor-patient-record-time'}}
     {{#repeat 2}}
     <a class="table__row table__row--success" href="">
       <span class="table__col">12:20</span>
@@ -242,7 +242,7 @@
 
 
 
-  {{#ifpage 'personal-record-confirm' 'doctor-record-confirm' 'cashier-record-confirm'}}
+  {{#ifpage 'personal-record-confirm' 'doctor-record-confirm' 'cashier-record-confirm' 'doctor-patient-record-confirm'}}
   <!--Подтвердить запись к врачу-->
   <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-28 sText-transform-none">Запись к врачу</h2>
 
@@ -252,12 +252,12 @@
 
       {{#ifpage 'doctor-record-confirm'}}
       <div class="sForm__item">
-        <span class="sForm__label">Пациент: Иванов Иван Иванович</span>
-        <input type="hidden" name="institution" value="Иванов Иван Иванович">
+        <span class="sForm__label sForm__label---link">Пациент: <a href="">Иванов Иван Иванович</a></span>
+        <input type="hidden" name="patient" value="Иванов Иван Иванович">
       </div>
       {{/ifpage}}
 
-      {{#ifpage 'cashier-record-confirm'}}
+      {{#ifpage 'cashier-record-confirm' 'doctor-patient-record-confirm'}}
       <div class="sForm__item record-input">
         <span class="sForm__label">Пациент:</span>
         <input type="text" name="patient" value="Иванов Иван Иванович">
@@ -318,8 +318,70 @@
       </div>
       {{/ifpage}}
 
+      {{#ifpage 'doctor-patient-record-confirm'}}
       <div class="sForm__item">
-        <div class="sForm__linear sForm__linear--v2">
+        <span class="sForm__label">Способ оплаты: Наличные</span>
+        <input type="hidden" name="type_payment" value="cash">
+      </div>
+
+      <div class="sForm__item">
+        <span class="sForm__label sForm__label---status">Статус оплаты: <span class="status status-error">Не оплачен</span></span>
+        <input type="hidden" name="status_payment" value="cash">
+      </div>
+
+      <div class="sForm__item">
+        <span class="sForm__label sForm__label---status">Статус оплаты: <span class="status status-success">Оплачен</span></span>
+        <input type="hidden" name="status_payment" value="cash">
+      </div>
+
+      <div class="sForm__item record-input record-input---personal">
+        <input type="checkbox" name="agreement" id="agreement">
+        <label for="agreement" class="sForm__label">Даю согласие на обработку персональных данных</label>
+      </div>
+
+      <div class="sForm__item record-input record-input---personal">
+        <input type="checkbox" name="offer" id="offer">
+        <label for="offer" class="sForm__label">Ознакомлен с <a class="record-input__link" href=""> договором оферты </a>
+          и <a class="record-input__link" href=""> правилами предоставления услуг </a></label>
+      </div>
+      {{/ifpage}}
+
+      {{#ifpage 'cashier-record-confirm'}}
+      <div class="sForm__item">
+        <span class="sForm__label">Способ оплаты: Наличные</span>
+        <input type="hidden" name="type_payment" value="cash">
+      </div>
+
+      <div class="sForm__item">
+        <span class="sForm__label sForm__label---status">Статус оплаты: <span class="status status-error">Не оплачен</span></span>
+        <input type="hidden" name="status_payment" value="cash">
+      </div>
+
+      <div class="sForm__item">
+        <span class="sForm__label sForm__label---status">Статус оплаты: <span class="status status-success">Оплачен</span></span>
+        <input type="hidden" name="status_payment" value="cash">
+      </div>
+
+      <div class="sForm__item record-input record-input---personal">
+        <input type="checkbox" name="agreement" id="agreement">
+        <label for="agreement" class="sForm__label">Даю согласие на обработку персональных данных</label>
+      </div>
+
+      <div class="sForm__item record-input record-input---personal">
+        <input type="checkbox" name="offer" id="offer">
+        <label for="offer" class="sForm__label">Ознакомлен с <a class="record-input__link" href=""> договором оферты </a>
+          и <a class="record-input__link" href=""> правилами предоставления услуг </a></label>
+      </div>
+
+      <div class="sForm__item">
+        <div class="sForm__linear sForm__linear--v7">
+          <a href="" class="btn btn--primary btn--small">Распечатать договор</a>
+        </div>
+      </div>
+      {{/ifpage}}
+
+      <div class="sForm__item">
+        <div class="sForm__linear sForm__linear--v7">
           <button class="btn btn--success js-confirm-record" type="submit">Подтвердить</button>
           <a class="btn btn--cancel" href="">Отмена</a>
         </div>

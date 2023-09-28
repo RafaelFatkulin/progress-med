@@ -173,15 +173,23 @@
                   <li class="menu__item">
                     <a href="" class="menu__link">
                       <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-                        <use xlink:href="assets/img/sprite/sprite.svg#icon-card" />
+                        <use xlink:href="assets/img/sprite/sprite.svg#icon-calendar" />
                       </svg>
-                      Записи
+                      Мое расписаник
                     </a>
                   </li>
                   <li class="menu__item">
                     <a href="" class="menu__link">
                       <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-                        <use xlink:href="assets/img/sprite/sprite.svg#icon-list" />
+                        <use xlink:href="assets/img/sprite/sprite.svg#icon-add" />
+                      </svg>
+                      Запись пациента
+                    </a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="" class="menu__link">
+                      <svg class="menu__icon" width="30" height="30" aria-hidden="true">
+                        <use xlink:href="assets/img/sprite/sprite.svg#icon-check" />
                       </svg>
                       Выписка
                     </a>
@@ -215,8 +223,8 @@
                   <div class="sForm__inner sG-row-gap-20">
 
                     <div class="sForm__item">
-                      <span class="sForm__label">Пациент: Иванов Иван Иванович</span>
-                      <input type="hidden" name="institution" value="Иванов Иван Иванович">
+                      <span class="sForm__label sForm__label---link">Пациент: <a href="">Иванов Иван Иванович</a></span>
+                      <input type="hidden" name="patient" value="Иванов Иван Иванович">
                     </div>
 
                     <div class="sForm__item">
@@ -246,7 +254,7 @@
                     </div>
 
                     <div class="sForm__item">
-                      <div class="sForm__linear sForm__linear--v2">
+                      <div class="sForm__linear sForm__linear--v7">
                         <button class="btn btn--success js-confirm-record" type="submit">Подтвердить</button>
                         <a class="btn btn--cancel" href="">Отмена</a>
                       </div>

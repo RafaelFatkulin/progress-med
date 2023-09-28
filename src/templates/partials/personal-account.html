@@ -945,8 +945,7 @@
           class="sForm__input"
           id="fullname"
           type="text"
-          name="fullname
-          fullname"
+          name="fullname"
           placeholder="ФИО"
         />
       </div>
@@ -1001,4 +1000,187 @@
       </div>
     </div><!--/.sForm__inner-->
   </di><!--/.sForm-->
+{{/ifpage}}
+
+{{#ifpage 'doctor-patient'}}
+<div class="content__box">
+  <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-28 sText-transform-none">Иванов Иван Иванович</h2>
+
+  <div class="sForm sForm--confirm">
+
+    <div class="sForm__inner sG-row-gap-20">
+
+      <div class="sForm__item">
+        <span class="sForm__label">СНИЛС: 0123456789</span>
+      </div>
+
+      <div class="sForm__item">
+        <span class="sForm__label">Дата рождения: 01.01.2000</span>
+      </div>
+
+      <div class="sForm__item">
+        <span class="sForm__label">Возраст: 23 года</span>
+      </div>
+
+      <div class="sForm__item">
+        <span class="sForm__label">Пол: Мужской</span>
+      </div>
+
+      <div class="sForm__item">
+        <span class="sForm__label">Противопоказания: Нет</span>
+      </div>
+    </div><!--/.sForm__inner-->
+  </div><!--/.sForm-->
+
+  <h2
+    class="content__title title sFw-500 sFz-18 sFz-lg-20 sText-transform-none"
+  >
+    История болезней
+  </h2>
+
+  <form action="" class="content__form-search sForm" method="post">
+    <div class="sForm__inner">
+      <div class="sForm__item">
+        <label class="visually-hidden" for="title">Поиск по названию</label>
+        <input
+          class="sForm__input"
+          id="title"
+          type="text"
+          name="title"
+          placeholder="Поиск по названию"
+        />
+      </div>
+      <!--/.sForm__item-->
+
+      <div class="sForm__item">
+        <div class="sForm__linear sForm__linear--v3">
+          <label class="sForm__label" for="start_date">от</label>
+          <input
+            class="sForm__input js-datepicker"
+            id="start_date"
+            type="text"
+            placeholder="00.00.00"
+            autocomplete="off"
+          />
+
+          <label class="sForm__label" for="end_date">до</label>
+          <input
+            class="sForm__input js-datepicker"
+            id="end_date"
+            type="text"
+            name="end_date"
+            placeholder="00.00.00"
+            autocomplete="off"
+          />
+        </div>
+      </div>
+      <!--/.sForm__item-->
+
+      <div class="sForm__item">
+        <button class="btn btn--primary" type="submit">Вывести</button>
+      </div>
+      <!--/.sForm__item-->
+    </div>
+    <!--/.sForm__inner-->
+  </form>
+  <!--/.sForm-->
+  <a href="" class="btn btn--primary add-illness">Добавить назначение</a>
+
+  <div class="table table--odd table--v7">
+    {{#repeat 4}}
+    <div class="table__row">
+      <div class="table__col">ОРВИ</div>
+      <div class="table__col sText-align-center sD-md-block">
+        02.12.24 12:34
+      </div>
+      <div class="table__col sText-align-right">Врач 1</div>
+    </div>
+    <div class="table__row">
+      <div class="table__col">Ангина</div>
+      <div class="table__col sText-align-center sD-md-block">
+        02.12.24 12:34
+      </div>
+      <div class="table__col sText-align-right">Врач 1</div>
+    </div>
+    {{/repeat}}
+  </div>
+
+  <a href="" class="btn btn--transparent">Еще</a>
+</div>
+
+{{/ifpage}}
+
+{{#ifpage 'doctor-add-prescription'}}
+  <form action="" class="sForm js-validate" method="post">
+    <section class="content__box">
+      <h2
+        class="content__title title sFw-500 sFz-18 sFz-lg-20 sText-transform-none"
+      >
+      Назначения для пациента Иванов Иван Иванович
+      </h2>
+
+      <div class="sForm__inner sG-row-gap-20 sG-column-gap-20">
+        <div class="sForm__item">
+          <label class="sForm__label" for="medicine">Лекаство</label>
+          <select
+            multiple
+            class="sForm__input"
+            id="medicine"
+            type="text"
+            name="medicine"
+            placeholder="ФИО"
+          >
+            <option value="Аспирин">Аспирин</option>
+            <option value="Аспирин">Аспирин</option>
+            <option value="Аспирин">Аспирин</option>
+            <option value="Аспирин">Аспирин</option>
+            <option value="Аспирин">Аспирин</option>
+            <option value="Аспирин">Аспирин</option>
+            <option value="Аспирин">Аспирин</option>
+            <option value="Аспирин">Аспирин</option>
+          </select>
+        </div>
+
+        <div class="sForm__item">
+          <label class="sForm__label" for="appointments">Назначения</label>
+          <input
+            class="sForm__input"
+            id="appointments"
+            type="text"
+            name="appointments"
+            placeholder="СНИЛС"
+          />
+        </div>
+
+        <div class="sForm__item">
+          <label class="sForm__label" for="contraindications">Противопоказания</label>
+          <input
+            class="sForm__input"
+            id="contraindications"
+            type="text"
+            name="contraindications"
+            placeholder="СНИЛС"
+          />
+        </div>
+
+        <div class="sForm__item">
+          <label class="sForm__label" for="analyzes">Анализы</label>
+          <div class="sForm__file-upload">
+            <div class="sForm__file-btn">
+              <button type="button">Choose file</button>
+              <input class="js-upload" type="file" name="analyzes" id="analyzes" required>
+            </div>
+            <div class="sForm__file-name">No file chosen</div>
+          </div>
+        </div><!--/.sForm__item-->
+      </div>
+
+      <div class="sForm__inner">
+        <div class="sForm__item sForm__item--column-lg-6">
+          <button class="btn btn--primary" type="submit">Сохранить</button>
+        </div>
+      </div>
+    </section>
+    <!--/.content__box-->
+  </form>
 {{/ifpage}}

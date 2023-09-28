@@ -1,7 +1,7 @@
 //-----===== Базовые переменные ====-----//
 
 // префикс
-$prefix: 's';
+$prefix: "s";
 
 // Стили шрифтов по умолчанию
 $font-style-basic: normal;
@@ -12,26 +12,45 @@ $font-family-basic: "Arial", sans-serif;
 $line-height-basic: 1.5;
 
 // метод разработки " mobile-first | desktop-first"
-$orientation: 'mobile-first';
+$orientation: "mobile-first";
 // максимальная ширина контейнера для desktop-first
 $width-container: 1200px;
 
 // Контрольные точки
 $container: (
-  sm: (breakpoint: 576px, max-width: 540px),
-  md: (breakpoint: 768px, max-width: 720px),
-  lg: (breakpoint: 992px, max-width: 960px),
-  xl: (breakpoint: 1200px, max-width: 1140px),
-  xxl: (breakpoint: 1400px, max-width: 1320px)
+  xs: (
+    breakpoint: 480px,
+    max-width: 440px,
+  ),
+  sm: (
+    breakpoint: 576px,
+    max-width: 540px,
+  ),
+  md: (
+    breakpoint: 768px,
+    max-width: 720px,
+  ),
+  lg: (
+    breakpoint: 992px,
+    max-width: 960px,
+  ),
+  xl: (
+    breakpoint: 1200px,
+    max-width: 1140px,
+  ),
+  xxl: (
+    breakpoint: 1400px,
+    max-width: 1320px,
+  ),
 );
 
 // Цвета
 $white: #ffffff;
 $black: #000000;
 
-$primary: #2C3D73;
-$primary2: #1D77FA;
+$primary: #2c3d73;
+$primary2: #1d77fa;
 
-$success: #41BE94;
-$danger: #E41E2F;
-$cancel: #DAE4F8;
+$success: #41be94;
+$danger: #e41e2f;
+$cancel: #dae4f8;

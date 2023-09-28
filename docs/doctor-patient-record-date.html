@@ -6,12 +6,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <title>Личные данные | Личный кабинет</title>
+  <title>Запись | Личный кабинет Доктора</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta name="author" content="Abraklion">
-  <meta name="description" content="Описания личные данные">
+  <meta name="description" content="Описание запись">
 
   <link rel="stylesheet" href="assets/css/style.min.css">
 
@@ -33,7 +33,7 @@
         <a href="" class="header__logo logo">
           <picture>
             <source media="(min-width: 992px)" srcset="assets/img/logo-desktop.svg" type="image/svg+xml">
-            <img class="logo__img" src="assets/img/logo-mobile.svg" width="36" height="21" alt="Логотип MED.PROGRESS">
+            <img class="logo__img" src="assets/img/logo-mobile.svg" width="32" height="19" alt="Логотип MED.PROGRESS">
           </picture>
         </a><!--/.logo-->
 
@@ -71,7 +71,7 @@
                           <svg class="menu__icon" width="30" height="30" aria-hidden="true">
                             <use xlink:href="assets/img/sprite/sprite.svg#icon-card" />
                           </svg>
-                          Медицинские учреждения
+                          Записи
                         </a>
                       </li>
                       <li class="menu__item">
@@ -134,7 +134,7 @@
 
               </div>
 
-            </div><!--/.sContainer-->
+            </div>
 
           </div>
 
@@ -153,7 +153,7 @@
 
         <div class="personal__inner">
 
-          <h1 class="personal__title title">Личный кабинет</h1>
+          <h1 class="personal__title title">Кабинет врача</h1>
 
           <div class="sRow">
 
@@ -173,39 +173,23 @@
                   <li class="menu__item">
                     <a href="" class="menu__link">
                       <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-                        <use xlink:href="assets/img/sprite/sprite.svg#icon-info" />
+                        <use xlink:href="assets/img/sprite/sprite.svg#icon-calendar" />
                       </svg>
-                      Медицинские учреждения
+                      Мое расписаник
                     </a>
                   </li>
                   <li class="menu__item">
                     <a href="" class="menu__link">
                       <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-                        <use xlink:href="assets/img/sprite/sprite.svg#icon-services" />
+                        <use xlink:href="assets/img/sprite/sprite.svg#icon-add" />
                       </svg>
-                      История назначений
+                      Запись пациента
                     </a>
                   </li>
                   <li class="menu__item">
                     <a href="" class="menu__link">
                       <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-                        <use xlink:href="assets/img/sprite/sprite.svg#icon-list-b" />
-                      </svg>
-                      История болезней
-                    </a>
-                  </li>
-                  <li class="menu__item">
-                    <a href="" class="menu__link">
-                      <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-                        <use xlink:href="assets/img/sprite/sprite.svg#icon-chat" />
-                      </svg>
-                      Обратная связь
-                    </a>
-                  </li>
-                  <li class="menu__item">
-                    <a href="" class="menu__link">
-                      <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-                        <use xlink:href="assets/img/sprite/sprite.svg#icon-list" />
+                        <use xlink:href="assets/img/sprite/sprite.svg#icon-check" />
                       </svg>
                       Выписка
                     </a>
@@ -229,7 +213,64 @@
 
             <div class="sCol-lg-8 sCol-xl-9">
 
-              <div class="personal__content content content--data">
+              <div class="personal__content content content--record">
+
+                <!--Выбертие дату-->
+                <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-10 sText-transform-none">Запись к врачу</h2>
+
+                <ul class="content__breadcrumbs breadcrumbs">
+                  <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="">Выберите отделение</a>
+                  </li>
+                  <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="">Рентген</a>
+                  </li>
+                  <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="">Выбертие врача</a>
+                  </li>
+                  <li class="breadcrumbs__item">
+                    Выберите дату
+                  </li>
+                </ul><!--/.breadcrumbs-->
+
+                <div class="table table--even table--hover table--v2">
+
+                  <div class="table__row table__row--header">
+                    <div class="table__col">
+                      <b>Дата</b>
+                    </div>
+                    <div class="table__col">
+                      <b>День недели</b>
+                    </div>
+                  </div>
+
+                  <a class="table__row" href="">
+                    <span class="table__col">12.04.2022</span>
+                    <span class="table__col">Понедельник</span>
+                  </a>
+                  <a class="table__row" href="">
+                    <span class="table__col">13.04.2022</span>
+                    <span class="table__col">Вторник</span>
+                  </a>
+                  <a class="table__row" href="">
+                    <span class="table__col">19.04.2022</span>
+                    <span class="table__col">Четверг</span>
+                  </a>
+                  <a class="table__row" href="">
+                    <span class="table__col">12.04.2022</span>
+                    <span class="table__col">Понедельник</span>
+                  </a>
+                  <a class="table__row" href="">
+                    <span class="table__col">13.04.2022</span>
+                    <span class="table__col">Вторник</span>
+                  </a>
+                  <a class="table__row" href="">
+                    <span class="table__col">19.04.2022</span>
+                    <span class="table__col">Четверг</span>
+                  </a>
+                </div><!--/.table-->
+
+                <a href="" class="btn btn--transparent">Еще</a>
 
               </div><!--/.content-->
 
