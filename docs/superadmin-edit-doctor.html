@@ -6,22 +6,22 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <title>ОРВИ 02.12.24 | Личный кабинет</title>
+  <title>Редактирование врача | Кабинет суперадминистратора</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=1220, initial-scale=1.0">
 
   <meta name="author" content="Abraklion">
-  <meta name="description" content="Описание болезни">
+  <meta name="description" content="Описание редактировани врача">
 
   <link rel="stylesheet" href="assets/css/style.min.css">
 
   <script defer src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 
   <script defer src="js/runtime.js"></script>
+  <script defer src="js/select2.js"></script>
   <script defer src="js/datepicker.js"></script>
-  <script defer src="js/validation.js"></script>
   <script defer src="js/main.js"></script>
-  <script defer src="js/personalAccount.js"></script>
+  <script defer src="js/adminAccount.js"></script>
 </head>
 
 <body class="page__body">
@@ -62,25 +62,57 @@
                       <li class="menu__item">
                         <a href="" class="menu__link active">
                           <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-                            <use xlink:href="assets/img/sprite/sprite.svg#icon-hospital" />
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-info" />
                           </svg>
-                          О медицинском учреждении
+                          Учреждения
                         </a>
                       </li>
                       <li class="menu__item">
                         <a href="" class="menu__link">
                           <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-                            <use xlink:href="assets/img/sprite/sprite.svg#icon-card" />
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-user" />
                           </svg>
-                          Услуги
+                          Главврачи
                         </a>
                       </li>
                       <li class="menu__item">
                         <a href="" class="menu__link">
                           <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-                            <use xlink:href="assets/img/sprite/sprite.svg#icon-map" />
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-cashiers" />
                           </svg>
-                          Местонахождение
+                          Кассиры
+                        </a>
+                      </li>
+                      <li class="menu__item">
+                        <a href="" class="menu__link active">
+                          <svg class="menu__icon" width="30" height="30" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-plus" />
+                          </svg>
+                          Фармацевты
+                        </a>
+                      </li>
+                      <li class="menu__item">
+                        <a href="" class="menu__link">
+                          <svg class="menu__icon" width="30" height="30" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-doctors" />
+                          </svg>
+                          Врачи
+                        </a>
+                      </li>
+                      <li class="menu__item">
+                        <a href="" class="menu__link">
+                          <svg class="menu__icon" width="30" height="30" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-user-outlined" />
+                          </svg>
+                          Пациенты
+                        </a>
+                      </li>
+                      <li class="menu__item">
+                        <a href="" class="menu__link">
+                          <svg class="menu__icon" width="30" height="30" aria-hidden="true">
+                            <use xlink:href="assets/img/sprite/sprite.svg#icon-exit" />
+                          </svg>
+                          Выйти
                         </a>
                       </li>
                     </ul><!--/.menu-->
@@ -152,9 +184,9 @@
 
       <div class="sContainer">
 
-        <div class="personal__inner sPt-0">
+        <div class="personal__inner">
 
-          <h1 class="personal__title title sMt-24 sMt-lg-60 sMt-xl-100">Личный кабинет</h1>
+          <h1 class="personal__title title">Кабинет суперадминистратора</h1>
 
           <div class="sRow">
 
@@ -166,49 +198,49 @@
                   <li class="menu__item">
                     <a href="" class="menu__link active">
                       <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-                        <use xlink:href="assets/img/sprite/sprite.svg#icon-user" />
-                      </svg>
-                      Личные данные
-                    </a>
-                  </li>
-                  <li class="menu__item">
-                    <a href="" class="menu__link">
-                      <svg class="menu__icon" width="30" height="30" aria-hidden="true">
                         <use xlink:href="assets/img/sprite/sprite.svg#icon-info" />
                       </svg>
-                      Медицинские учреждения
+                      Учреждения
                     </a>
                   </li>
                   <li class="menu__item">
                     <a href="" class="menu__link">
                       <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-                        <use xlink:href="assets/img/sprite/sprite.svg#icon-services" />
+                        <use xlink:href="assets/img/sprite/sprite.svg#icon-user" />
                       </svg>
-                      История назначений
+                      Главврачи
                     </a>
                   </li>
                   <li class="menu__item">
                     <a href="" class="menu__link">
                       <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-                        <use xlink:href="assets/img/sprite/sprite.svg#icon-list-b" />
+                        <use xlink:href="assets/img/sprite/sprite.svg#icon-cashiers" />
                       </svg>
-                      История болезней
+                      Кассиры
                     </a>
                   </li>
                   <li class="menu__item">
                     <a href="" class="menu__link">
                       <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-                        <use xlink:href="assets/img/sprite/sprite.svg#icon-chat" />
+                        <use xlink:href="assets/img/sprite/sprite.svg#icon-plus" />
                       </svg>
-                      Обратная связь
+                      Фармацевты
                     </a>
                   </li>
                   <li class="menu__item">
                     <a href="" class="menu__link">
                       <svg class="menu__icon" width="30" height="30" aria-hidden="true">
-                        <use xlink:href="assets/img/sprite/sprite.svg#icon-list" />
+                        <use xlink:href="assets/img/sprite/sprite.svg#icon-doctors" />
                       </svg>
-                      Выписка
+                      Врачи
+                    </a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="" class="menu__link">
+                      <svg class="menu__icon" width="30" height="30" aria-hidden="true">
+                        <use xlink:href="assets/img/sprite/sprite.svg#icon-user-outlined" />
+                      </svg>
+                      Пациенты
                     </a>
                   </li>
                   <li class="menu__item">
@@ -230,7 +262,50 @@
 
             <div class="sCol-lg-8 sCol-xl-9">
 
-              <div class="personal__content content content--illness">
+              <div class="personal__content content content--edit-personal">
+
+                <!--Личные данные врача-->
+                <form action="" class="sForm js-validate" method="post">
+                  <section class="content__box">
+                    <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sText-transform-none">
+                      Личные данные врача
+                    </h2>
+
+                    <div class="sForm__inner sG-row-gap-20 sG-column-gap-20">
+                      <div class="sForm__item sForm__item--column-lg-6">
+                        <label class="visually-hidden" for="name">Имя</label>
+                        <input class="sForm__input" id="name" type="text" name="name" placeholder="Имя" />
+                      </div>
+
+                      <div class="sForm__item sForm__item--column-lg-6">
+                        <label class="visually-hidden" for="family">Фамилия</label>
+                        <input class="sForm__input" id="family" type="text" name="family" placeholder="Фамилия" />
+                      </div>
+
+                      <div class="sForm__item sForm__item--column-lg-12">
+                        <label class="visually-hidden" for="specialization">Специализация</label>
+                        <input class="sForm__input" id="specialization" type="text" name="specialization" placeholder="Специализация" />
+                      </div>
+
+                      <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sM-0 sMt-10 sText-transform-none">
+                        Обо мне
+                      </h2>
+
+                      <div class="sForm__item sForm__item--column-lg-12">
+                        <label class="visually-hidden" for="about_me">Обо мне</label>
+                        <textarea class="sForm__textarea" id="about_me" type="text" name="about_me" placeholder="Обо мне"></textarea>
+                      </div>
+                    </div>
+                  </section>
+                  <!--/.content__box-->
+
+                  <div class="sForm__inner">
+                    <div class="sForm__item sForm__item--column-lg-6">
+                      <button class="btn btn--primary" type="submit">Сохранить</button>
+                    </div>
+                  </div>
+                </form>
+                <!--/.sForm-->
 
               </div><!--/.content-->
 
@@ -251,7 +326,7 @@
       <div class="footer__inner">
 
         <a href="" class="footer__logo logo">
-          <img class="logo__img" src="assets/img/logo-footer.svg" width="180" height="20" alt="Логотип MED.PROGRESS">
+          <img class="logo__img" src="assets/img/logo-footer.svg" width="187" height="21" alt="Логотип MED.PROGRESS">
         </a><!--/.logo-->
 
         <ul class="footer__menu menu menu--footer sD-none sD-lg-flex">
@@ -259,13 +334,16 @@
             <a href="" class="menu__link">Главная</a>
           </li>
           <li class="menu__item">
-            <a href="" class="menu__link">Сервисы</a>
+            <a href="" class="menu__link">Платежи через сайт</a>
           </li>
           <li class="menu__item">
             <a href="" class="menu__link">О нас</a>
           </li>
           <li class="menu__item">
-            <a href="" class="menu__link">Другие страницы</a>
+            <a href="" class="menu__link">Политика конфеденциальности</a>
+          </li>
+          <li class="menu__item">
+            <a href="" class="menu__link">Публичная оферта</a>
           </li>
         </ul><!--/.menu-->
 

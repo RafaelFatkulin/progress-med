@@ -1,0 +1,58 @@
+---
+layout: admin
+
+title: Редактирование фармацевта | Кабинет суперадминистратора
+description: Описание редактировани фармацевта
+
+link: style.min.css
+script: ['runtime.js', 'select2.js', 'datepicker.js', 'main.js', 'adminAccount.js']
+
+lottiePlayer: false
+---
+
+{{> header-superadmin}}
+
+<main>
+
+  <div class="personal">
+
+    <div class="sContainer">
+
+      <div class="personal__inner">
+
+        <h1 class="personal__title title">Кабинет суперадминистратора</h1>
+
+        <div class="sRow">
+
+          <div class="sCol-lg-4 sCol-xl-3 sD-none sD-lg-block">
+
+            <aside class="personal__sidebar sidebar">
+
+              {{> sidebar-menu-superadmin}}
+
+            </aside><!--/.sidebar-->
+
+          </div>
+
+          <div class="sCol-lg-8 sCol-xl-9">
+
+            <div class="personal__content content content--edit-personal">
+
+              {{> personal-account}}
+
+            </div><!--/.content-->
+
+          </div>
+
+        </div>
+
+      </div><!--/.personal__inner"-->
+
+    </div><!--/.sContainer-->
+  </div><!--/.personal-->
+
+</main>
+
+{{> footer-admin}}
+
+{{> modal}}

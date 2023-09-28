@@ -1,13 +1,8 @@
 
-{{#ifpage 'admin-users' 'registry-users' 'cashier-users'}}
+{{#ifpage 'admin-users' 'registry-users' 'cashier-users' 'superadmin-users'}}
 <!--Список пользователей-->
 <h2 class="content__title title sFw-500 sFz-20 sText-transform-none">
-  {{#ifpage 'admin-users' 'cashier-users'}}
-  Список пользователей
-  {{/ifpage}}
-  {{#ifpage 'registry-users'}}
-  Список врачей
-  {{/ifpage}}
+    Список пользователей
 </h2>
 
 <form action="" class="content__form-search sForm" method="post">
@@ -58,7 +53,15 @@
   {{#repeat 4}}
   <div class="table__row">
     <div class="table__col">
-      <span class="clip" title="login_polzovatela">login_polzovatela</span>
+      <span class="clip" title="login_polzovatela">
+        {{#unlesspage 'registry-users' 'superadmin-users' }}
+          login_polzovatela
+        {{/unlesspage}}
+
+        {{#ifpage 'registry-users' 'superadmin-users'}}
+          <a href="" class="user-link">login_polzovatela</a>
+        {{/ifpage}}
+      </span>
     </div>
     <div class="table__col">
       <span class="clip" title="4752015698">4752015698</span>
@@ -92,7 +95,15 @@
 
   <div class="table__row">
     <div class="table__col">
-      <span class="clip" title="login_polzovatela">login_polzovatela</span>
+      <span class="clip" title="login_polzovatela">
+        {{#unlesspage 'registry-users' 'superadmin-users' }}
+          login_polzovatela
+        {{/unlesspage}}
+
+        {{#ifpage 'registry-users' 'superadmin-users'}}
+          <a href="" class="user-link">login_polzovatela</a>
+        {{/ifpage}}
+      </span>
     </div>
     <div class="table__col">
       <span class="clip" title="4752015698">4752015698</span>
@@ -132,14 +143,11 @@
 
 
 
-{{#ifpage 'admin-history' 'registry-history' 'cashier-history'}}
+{{#ifpage 'admin-history' 'registry-history' 'cashier-history' 'superadmin-user-history'}}
 <!--История операций-->
 <h2 class="content__title title sFw-500 sFz-20 sText-transform-none">
-  {{#ifpage 'admin-history' 'cashier-history'}}
+  {{#ifpage 'admin-history' 'cashier-history' 'superadmin-user-history' 'registry-history'}}
   История операций пользователя
-  {{/ifpage}}
-  {{#ifpage 'registry-history'}}
-  История операций врача
   {{/ifpage}}
   <b>login_polzovatela</b>
 </h2>
@@ -212,7 +220,6 @@
 
 <a href="" class="btn btn--transparent">Еще</a>
 {{/ifpage}}
-
 
 
 {{#ifpage 'admin-edit-user' 'registry-edit-user'}}
@@ -647,7 +654,7 @@
 </form><!--/.sForm-->
 {{/ifpage}}
 
-{{#ifpage 'registry-doctors'}}
+{{#ifpage 'registry-doctors' 'superadmin-doctors'}}
 <!--Медицинские учреждения-->
 <div class="content__box">
   <h2
@@ -744,4 +751,322 @@
   <a href="" class="btn btn--transparent">Еще</a>
 </div>
 <!--/.content__box-->
+{{/ifpage}}
+
+{{#ifpage  'superadmin-pharmacists' 'superadmin-cashiers' 'superadmin-registries'}}
+<!--Медицинские учреждения-->
+<div class="content__box">
+  {{#ifpage 'superadmin-pharmacists'}}
+    <h2
+      class="content__title title sFw-500 sFz-18 sFz-lg-20 sText-transform-none"
+    >
+      Список фармацевтов
+    </h2>
+  {{/ifpage}}
+
+  {{#ifpage 'superadmin-cashiers'}}
+    <h2
+      class="content__title title sFw-500 sFz-18 sFz-lg-20 sText-transform-none"
+    >
+      Список кассиров
+    </h2>
+  {{/ifpage}}
+
+  {{#ifpage 'superadmin-registries'}}
+    <h2
+      class="content__title title sFw-500 sFz-18 sFz-lg-20 sText-transform-none"
+    >
+      Список главврачей
+    </h2>
+  {{/ifpage}}
+
+  <form
+    action=""
+    class="content__form-search content__form-search--v2 sForm"
+    method="post"
+  >
+    <div class="sForm__inner">
+      <div class="sForm__item">
+        <label class="visually-hidden" for="full_name">Поиск по имени</label>
+        <input
+          class="sForm__input"
+          id="full_name"
+          type="text"
+          name="full_name"
+          placeholder="Поиск по имени"
+        />
+      </div>
+      <!--/.sForm__item-->
+
+      <div class="sForm__item">
+        <button class="btn btn--primary" type="submit">Вывести</button>
+      </div>
+      <!--/.sForm__item-->
+    </div>
+    <!--/.sForm__inner-->
+  </form>
+  <!--/.sForm-->
+
+  <div class="table table--even table--hover-shadow table--v10">
+
+    <div class="table__row table__row--header">
+      <div class="table__col">
+        <b>ФИО</b>
+      </div>
+    </div><!--/.table__row--header-->
+
+
+    {{#repeat 4}}
+    <div class="table__row">
+      <div class="table__col">
+        <span title="Иванов Иван Иванович">Иванов Иван Иванович</span>
+      </div>
+      <div class="table__col">
+        <div class="table__wrapper-btn">
+          <a class="table__link" href="" title="Профиль">
+            <svg class="table__icon" width="26" height="26" aria-hidden="true">
+              <use xlink:href="assets/img/sprite/sprite.svg#icon-edit-min"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div><!--/.table__row-->
+    {{/repeat}}
+
+  </div>
+
+  <a href="" class="btn btn--transparent">Еще</a>
+</div>
+<!--/.content__box-->
+{{/ifpage}}
+
+{{#ifpage  'superadmin-hospital-departments'}}
+<!--Медицинские учреждения-->
+<div class="content__box">
+  <h2
+      class="content__title title sFw-500 sFz-18 sFz-lg-20 sText-transform-none"
+    >
+      Отделения
+      <a
+        href=""
+        class="btn btn--transparent"
+        >Создать</a
+      >
+    </h2>
+
+
+  <form
+    action=""
+    class="content__form-search content__form-search--v2 sForm"
+    method="post"
+  >
+    <div class="sForm__inner">
+      <div class="sForm__item">
+        <label class="visually-hidden" for="full_name">Поиск по названию</label>
+        <input
+          class="sForm__input"
+          id="full_name"
+          type="text"
+          name="full_name"
+          placeholder="Поиск по названию"
+        />
+      </div>
+      <!--/.sForm__item-->
+
+      <div class="sForm__item">
+        <button class="btn btn--primary" type="submit">Вывести</button>
+      </div>
+      <!--/.sForm__item-->
+    </div>
+    <!--/.sForm__inner-->
+  </form>
+  <!--/.sForm-->
+
+  <div class="table table--even table--hover-shadow table--v10">
+
+    <div class="table__row table__row--header">
+      <div class="table__col">
+        <b>Название</b>
+      </div>
+    </div><!--/.table__row--header-->
+
+
+    {{#repeat 4}}
+    <div class="table__row">
+      <div class="table__col">
+        <span title="Терапия">Терапия</span>
+      </div>
+      <div class="table__col">
+        <div class="table__wrapper-btn">
+          <a class="table__link" href="" title="Редактировать">
+            <svg class="table__icon" width="26" height="26" aria-hidden="true">
+              <use xlink:href="assets/img/sprite/sprite.svg#icon-edit-min"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div><!--/.table__row-->
+    {{/repeat}}
+
+  </div>
+
+  <a href="" class="btn btn--transparent">Еще</a>
+</div>
+<!--/.content__box-->
+{{/ifpage}}
+
+{{#ifpage  'superadmin-hospitals-list'}}
+<!--Медицинские учреждения-->
+<div class="content__box">
+  <h2
+      class="content__title title sFw-500 sFz-18 sFz-lg-20 sText-transform-none"
+    >
+      Учреждения
+      <a
+        href=""
+        class="btn btn--transparent"
+        >Создать</a
+      >
+    </h2>
+
+
+  <form
+    action=""
+    class="content__form-search content__form-search--v2 sForm"
+    method="post"
+  >
+    <div class="sForm__inner">
+      <div class="sForm__item">
+        <label class="visually-hidden" for="full_name">Поиск по названию</label>
+        <input
+          class="sForm__input"
+          id="full_name"
+          type="text"
+          name="full_name"
+          placeholder="Поиск по названию"
+        />
+      </div>
+      <!--/.sForm__item-->
+
+      <div class="sForm__item">
+        <button class="btn btn--primary" type="submit">Вывести</button>
+      </div>
+      <!--/.sForm__item-->
+    </div>
+    <!--/.sForm__inner-->
+  </form>
+  <!--/.sForm-->
+
+  <div class="table table--even table--hover-shadow table--v10">
+
+    <div class="table__row table__row--header">
+      <div class="table__col">
+        <b>Название</b>
+      </div>
+    </div><!--/.table__row--header-->
+
+
+    {{#repeat 4}}
+    <div class="table__row">
+      <div class="table__col">
+        <span title="Поликлиника №52"><a class="table__link" href="">Поликлиника №52</a></span>
+      </div>
+      <div class="table__col">
+        <div class="table__wrapper-btn">
+          <a class="table__link" href="" title="Редактировать">
+            <svg class="table__icon" width="26" height="26" aria-hidden="true">
+              <use xlink:href="assets/img/sprite/sprite.svg#icon-edit-min"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div><!--/.table__row-->
+    {{/repeat}}
+
+  </div>
+
+  <a href="" class="btn btn--transparent">Еще</a>
+</div>
+<!--/.content__box-->
+{{/ifpage}}
+
+{{#ifpage 'registry-doctor-history' 'superadmin-doctor-history'}}
+<!--История операций-->
+<h2 class="content__title title sFw-500 sFz-20 sText-transform-none">
+  История приемов врача
+  <b>login_polzovatela</b>
+</h2>
+
+<form action="" class="content__form-search sForm sMb-24" method="post">
+
+  <div class="sForm__inner">
+
+    <div class="sForm__item">
+      <label class="visually-hidden" for="full_name">Поиск по имени</label>
+      <input class="sForm__input" id="full_name" type="text" name="full_name" placeholder="Поиск по имени">
+    </div><!--/.sForm__item-->
+
+    <div class="sForm__item">
+      <div class="sForm__linear sForm__linear--v3">
+        <label class="sForm__label" for="start_date">от</label>
+        <input class="sForm__input js-datepicker" id="start_date" type="text" name="start_date" placeholder="00.00.00" autocomplete="off">
+
+        <label class="sForm__label" for="end_date">до</label>
+        <input class="sForm__input js-datepicker" id="end_date" type="text" name="end_date" placeholder="00.00.00" autocomplete="off">
+      </div>
+    </div><!--/.sForm__item-->
+
+    <div class="sForm__item">
+      <button class="btn btn--primary" type="submit">Вывести</button>
+    </div><!--/.sForm__item-->
+
+  </div><!--/.sForm__inner-->
+
+</form><!--/.sForm-->
+
+<div class="table table--odd table--v9">
+
+  {{#repeat 2}}
+  <div class="table__row">
+    <div class="table__col">
+      Иванов Иван Иванович
+    </div>
+    <div class="table__col sText-align-center">02.12.24 12:34</div>
+    <div class="table__col sText-align-right">Ангина</div>
+  </div>
+  {{/repeat}}
+
+  {{#repeat 2}}
+  <div class="table__row">
+    <div class="table__col">
+      Иванов Иван Иванович
+    </div>
+    <div class="table__col sText-align-center">02.12.24 12:34</div>
+    <div class="table__col sText-align-right">Ангина</div>
+  </div>
+  {{/repeat}}
+
+  {{#repeat 2}}
+  <div class="table__row">
+    <div class="table__col">
+      Иванов Иван Иванович
+    </div>
+    <div class="table__col sText-align-center">02.12.24 12:34</div>
+    <div class="table__col sText-align-right">ОРВИ</div>
+  </div>
+  {{/repeat}}
+
+  {{#repeat 2}}
+  <div class="table__row">
+    <div class="table__col">
+      Иванов Иван Иванович
+    </div>
+    <div class="table__col sText-align-center">02.12.24 12:34</div>
+    <div class="table__col sText-align-right">ОРВИ</div>
+  </div>
+  {{/repeat}}
+
+</div>
+
+<a href="" class="btn btn--transparent">Еще</a>
 {{/ifpage}}

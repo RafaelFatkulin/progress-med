@@ -164,6 +164,17 @@
       }
     }
   }
+
+  &--v10 {
+    .table__row {
+      grid-template-columns: 75% 23%;
+      grid-column-gap: 2%;
+
+      @include m.media("md") {
+        grid-template-columns: 75% 23%;
+      }
+    }
+  }
 }
 
 .table__row {

@@ -1,4 +1,4 @@
-{{#ifpage 'personal-data' 'doctor-data' 'cashier-data' 'pharmacist-data' }}
+{{#ifpage 'personal-data' 'doctor-data' 'cashier-data' 'pharmacist-data' 'superadmin-data' }}
 <!--Личные данные-->
 <form action="" class="sForm js-validate" method="post">
   <section class="content__box">
@@ -170,7 +170,7 @@
 <!--/.sForm-->
 {{/ifpage}}
 
-{{#ifpage 'registry-edit-doctor'}}
+{{#ifpage 'registry-edit-doctor' 'superadmin-edit-doctor'}}
 <!--Личные данные врача-->
 <form action="" class="sForm js-validate" method="post">
   <section class="content__box">
@@ -243,6 +243,111 @@
 <!--/.sForm-->
 {{/ifpage}}
 
+{{#ifpage 'superadmin-edit-registry' 'superadmin-edit-cashier' 'superadmin-edit-pharmacist' 'superadmin-edit-user'}}
+<!--Личные данные врача-->
+<form action="" class="sForm js-validate" method="post">
+  <section class="content__box">
+    {{#ifpage 'superadmin-edit-registry'}}
+      <h2
+        class="content__title title sFw-500 sFz-18 sFz-lg-20 sText-transform-none"
+      >
+        Личные данные главврача
+      </h2>
+    {{/ifpage}}
+
+    {{#ifpage 'superadmin-edit-cashier'}}
+      <h2
+        class="content__title title sFw-500 sFz-18 sFz-lg-20 sText-transform-none"
+      >
+        Личные данные кассира
+      </h2>
+    {{/ifpage}}
+
+    {{#ifpage 'superadmin-edit-pharmacist'}}
+      <h2
+        class="content__title title sFw-500 sFz-18 sFz-lg-20 sText-transform-none"
+      >
+        Личные данные фармацевта
+      </h2>
+    {{/ifpage}}
+
+    {{#ifpage 'superadmin-edit-user'}}
+      <h2
+        class="content__title title sFw-500 sFz-18 sFz-lg-20 sText-transform-none"
+      >
+        Личные данные пациента
+      </h2>
+    {{/ifpage}}
+
+    <div class="sForm__inner sG-row-gap-20 sG-column-gap-20">
+      <div class="sForm__item sForm__item--column-lg-6">
+        <label class="visually-hidden" for="name">Имя</label>
+        <input
+          class="sForm__input"
+          id="name"
+          type="text"
+          name="name"
+          placeholder="Имя"
+        />
+      </div>
+
+      <div class="sForm__item sForm__item--column-lg-6">
+        <label class="visually-hidden" for="family">Фамилия</label>
+        <input
+          class="sForm__input"
+          id="family"
+          type="text"
+          name="family"
+          placeholder="Фамилия"
+        />
+      </div>
+    </div>
+  </section>
+  <!--/.content__box-->
+
+  <div class="sForm__inner">
+    <div class="sForm__item sForm__item--column-lg-6">
+      <button class="btn btn--primary" type="submit">Сохранить</button>
+    </div>
+  </div>
+</form>
+<!--/.sForm-->
+{{/ifpage}}
+
+{{#ifpage 'superadmin-edit-department'}}
+<!--Личные данные врача-->
+<form action="" class="sForm js-validate" method="post">
+  <section class="content__box">
+    <h2
+      class="content__title title sFw-500 sFz-18 sFz-lg-20 sText-transform-none"
+    >
+      Данные отделения
+    </h2>
+
+    <div class="sForm__inner sG-row-gap-20 sG-column-gap-20">
+      <div class="sForm__item sForm__item--column-lg-12">
+        <label class="visually-hidden" for="title">Название</label>
+        <input
+          class="sForm__input"
+          id="title"
+          type="text"
+          name="title"
+          placeholder="Название"
+        />
+      </div>
+    </div>
+  </section>
+  <!--/.content__box-->
+
+  <div class="sForm__inner">
+    <div class="sForm__item sForm__item--column-lg-6">
+      <button class="btn btn--primary" type="submit">Сохранить</button>
+    </div>
+  </div>
+</form>
+<!--/.sForm-->
+{{/ifpage}}
+
 {{#ifpage 'personal-hospitals-list'}}
 <!--Медицинские учреждения-->
 <div class="content__box">
@@ -252,6 +357,7 @@
     Мои медицинские учреждения
   </h2>
 
+
   <div class="sRow sGy-4">
     {{#repeat 3}}
     <div class="sCol-md-6 sCol-xl-4">
@@ -293,11 +399,14 @@
               <a href="" class="hospital__btn btn btn--transparent"
                 >Узнать больше</a
               >
-              <a
+              {{#ifpage 'personal-hospitals-list'}}
+                <a
                 href=""
                 class="hospital__btn hospital__btn--favourites btn btn--transparent"
                 title="Удалить из избранного"
-              ></a>
+                ></a>
+              {{/ifpage}}
+
             </div>
           </div>
         </div>
@@ -309,81 +418,84 @@
 </div>
 <!--/.content__box-->
 
-<div class="content__box sMb-0">
-  <h2
-    class="content__title title sFw-500 sFz-18 sFz-lg-20 sText-transform-none sD-md-flex sF-justify-content-md-between sF-align-items-md-center"
-  >
-    Другие медицинские учреждения
-    <a
-      href=""
-      class="btn btn--transparent sD-none sD-md-inline-block sBox-shadow-none"
-      >Посмотреть все</a
+  {{#ifpage 'personal-hospitals-list'}}
+  <div class="content__box sMb-0">
+    <h2
+      class="content__title title sFw-500 sFz-18 sFz-lg-20 sText-transform-none sD-md-flex sF-justify-content-md-between sF-align-items-md-center"
     >
-  </h2>
-
-  <div class="sRow sGy-4">
-    {{#repeat 3}}
-    <div class="sCol-md-6 sCol-xl-4">
-      <article class="hospital">
-        <div class="hospital__inner">
-          <div class="hospital__img">
-            <picture>
-              <source
-                media="(min-width: 992px)"
-                srcset="assets/img/icon-plug2.svg"
-                type="image/svg+xml"
-              />
-              <img
-                class=""
-                src="assets/img/icon-plug5.svg"
-                width="300"
-                height="125"
-                alt=""
-              />
-            </picture>
-          </div>
-
-          <div class="hospital__inner-content">
-            <div class="hospital__content">
-              <h3
-                class="hospital__title title sFw-500 sFz-16 sText-transform-none"
-              >
-                Поликлиника 1
-              </h3>
-
-              <p class="hospital__description">
-                There are many variations of passages of Lorem Ipsum available,
-                but the majority have suffered alteration in some form, by
-                injected humour
-              </p>
-            </div>
-
-            <div class="hospital__wrapper-btn">
-              <a href="" class="hospital__btn btn btn--transparent"
-                >Узнать больше</a
-              >
-              <a
-                href=""
-                class="hospital__btn hospital__btn--favourites-transparent btn btn--transparent"
-                title="Добавить в избранное"
-              ></a>
-            </div>
-          </div>
-        </div>
-      </article>
-      <!--/.hospitals-->
-    </div>
-    {{/repeat}}
-
-    <div class="sCol-md-6 sCol-xl-4 sText-align-center sD-md-none">
-      <!-- кнопка для мобилок -->
-      <a href="" class="btn btn--transparent sBox-shadow-none"
+      Другие медицинские учреждения
+      <a
+        href=""
+        class="btn btn--transparent sD-none sD-md-inline-block sBox-shadow-none"
         >Посмотреть все</a
       >
+    </h2>
+
+    <div class="sRow sGy-4">
+      {{#repeat 3}}
+      <div class="sCol-md-6 sCol-xl-4">
+        <article class="hospital">
+          <div class="hospital__inner">
+            <div class="hospital__img">
+              <picture>
+                <source
+                  media="(min-width: 992px)"
+                  srcset="assets/img/icon-plug2.svg"
+                  type="image/svg+xml"
+                />
+                <img
+                  class=""
+                  src="assets/img/icon-plug5.svg"
+                  width="300"
+                  height="125"
+                  alt=""
+                />
+              </picture>
+            </div>
+
+            <div class="hospital__inner-content">
+              <div class="hospital__content">
+                <h3
+                  class="hospital__title title sFw-500 sFz-16 sText-transform-none"
+                >
+                  Поликлиника 1
+                </h3>
+
+                <p class="hospital__description">
+                  There are many variations of passages of Lorem Ipsum available,
+                  but the majority have suffered alteration in some form, by
+                  injected humour
+                </p>
+              </div>
+
+              <div class="hospital__wrapper-btn">
+                <a href="" class="hospital__btn btn btn--transparent"
+                  >Узнать больше</a
+                >
+                <a
+                  href=""
+                  class="hospital__btn hospital__btn--favourites-transparent btn btn--transparent"
+                  title="Добавить в избранное"
+                ></a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!--/.hospitals-->
+      </div>
+      {{/repeat}}
+
+      <div class="sCol-md-6 sCol-xl-4 sText-align-center sD-md-none">
+        <!-- кнопка для мобилок -->
+        <a href="" class="btn btn--transparent sBox-shadow-none"
+          >Посмотреть все</a
+        >
+      </div>
     </div>
   </div>
-</div>
-<!--/.content__box-->
+  <!--/.content__box-->
+  {{/ifpage}}
+
 {{/ifpage}}
 
 {{#ifpage 'personal-extract' 'doctor-extract'}}
@@ -411,7 +523,7 @@
 <a href="" class="btn btn--transparent">Еще</a>
 {{/ifpage}}
 
-{{#ifpage 'personal-hospital'}}
+{{#ifpage 'personal-hospital' 'superadmin-hospital'}}
 <!--Поликлиника-->
 <h2
   class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-40 sText-transform-none"
@@ -454,7 +566,7 @@
 </div>
 {{/ifpage}}
 
-{{#ifpage 'personal-location-hospital'}}
+{{#ifpage 'personal-location-hospital' 'superadmin-location-hospital'}}
 <!--Местонахождение-->
 <iframe
   class="content__map"
@@ -527,7 +639,7 @@
 </div>
 {{/ifpage}}
 
-{{#ifpage 'personal-hospital-price-list'}}
+{{#ifpage 'personal-hospital-price-list' 'superadmin-hospital-price-list'}}
 <!--Медицинские учреждения-->
 <div class="content__box">
   <h2
@@ -1121,7 +1233,7 @@
   </di><!--/.sForm-->
 {{/ifpage}}
 
-{{#ifpage 'doctor-patient'}}
+{{#ifpage 'doctor-patient' 'registry-patient' 'superadmin-patient'}}
 <div class="content__box">
   <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-28 sText-transform-none">Иванов Иван Иванович</h2>
 
@@ -1366,4 +1478,61 @@
   </section>
   <!--/.content__box-->
 </form>
+{{/ifpage}}
+
+
+{{#ifpage 'superadmin-edit-hospital'}}
+<!--Личные данные врача-->
+<form action="" class="sForm js-validate" method="post">
+  <section class="content__box">
+      <h2
+        class="content__title title sFw-500 sFz-18 sFz-lg-20 sText-transform-none"
+      >
+        Редактирование учреждения
+      </h2>
+
+    <div class="sForm__inner sG-row-gap-20 sG-column-gap-20">
+      <div class="sForm__item sForm__item--column-lg-12">
+        <label class="visually-hidden" for="title">Название</label>
+        <input
+          class="sForm__input"
+          id="title"
+          type="text"
+          name="title"
+          placeholder="Название"
+        />
+      </div>
+
+      <div class="sForm__item sForm__item--column-lg-12">
+        <label class="visually-hidden" for="location">Местоположение</label>
+        <input
+          class="sForm__input"
+          id="location"
+          type="text"
+          name="location"
+          placeholder="Местоположение"
+        />
+      </div>
+
+      <div class="sForm__item sForm__item--column-lg-12">
+        <label class="visually-hidden" for="about">О больнице</label>
+        <textarea
+          class="sForm__textarea"
+          id="about"
+          type="text"
+          name="about"
+          placeholder="О больнице"
+        ></textarea>
+      </div>
+    </div>
+  </section>
+  <!--/.content__box-->
+
+  <div class="sForm__inner">
+    <div class="sForm__item sForm__item--column-lg-6">
+      <button class="btn btn--primary" type="submit">Сохранить</button>
+    </div>
+  </div>
+</form>
+<!--/.sForm-->
 {{/ifpage}}

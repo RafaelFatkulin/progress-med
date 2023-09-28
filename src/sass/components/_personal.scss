@@ -17,6 +17,7 @@
 }
 
 .personal__title {
+  hyphens: auto;
   margin: 0 0 40px 0;
 
   @include m.media("lg") {
@@ -81,8 +82,13 @@
 
   .record-select {
     div {
-      grid-template-columns: 1fr;
+      grid-template-columns: auto minmax(auto, 200px);
       grid-gap: 6px;
+
+      @include m.media("sm") {
+        grid-template-columns: auto minmax(200px, 200px);
+        grid-gap: 12px;
+      }
     }
   }
 }

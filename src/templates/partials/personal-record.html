@@ -1,4 +1,4 @@
-{{#ifpage 'personal-record-department' 'cashier-record-department' 'doctor-patient-record-department'}}
+{{#ifpage 'personal-record-department' 'cashier-record-department' 'doctor-patient-record-department' 'superadmin-record-department'}}
 <!--Выбертие отделение-->
 <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-20 sText-transform-none">Запись к врачу</h2>
 
@@ -23,7 +23,7 @@
 
 
 
-{{#ifpage 'personal-record-service' 'cashier-record-service' 'doctor-patient-record-service'}}
+{{#ifpage 'personal-record-service' 'cashier-record-service' 'doctor-patient-record-service' 'superadmin-record-service'}}
 <!--Выбертие услугу-->
 <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-20 sText-transform-none">Запись к врачу</h2>
 
@@ -48,7 +48,7 @@
 
 
 
-{{#ifpage 'personal-record-doctor' 'cashier-record-doctor' 'doctor-patient-record-doctor'}}
+{{#ifpage 'personal-record-doctor' 'cashier-record-doctor' 'doctor-patient-record-doctor' 'superadmin-record-doctor'}}
 <!--Выбертие врача-->
 <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-20 sText-transform-none">Запись к врачу</h2>
 
@@ -74,9 +74,7 @@
 </div><!--/.table-->
 {{/ifpage}}
 
-
-
-{{#ifpage 'personal-record-date' 'doctor-record-date' 'cashier-record-date' 'doctor-patient-record-date' 'registry-doctor-record-date'}}
+{{#ifpage 'personal-record-date' 'doctor-record-date' 'cashier-record-date' 'doctor-patient-record-date' 'registry-doctor-record-date' 'superadmin-record-date'}}
 <!--Выбертие дату-->
 {{#unlesspage 'doctor-record-date' 'registry-doctor-record-date'}}
 <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-20 sText-transform-none">Запись к врачу</h2>
@@ -147,7 +145,7 @@
 
 
 
-{{#ifpage 'personal-record-time' 'doctor-record-time' 'cashier-record-time' 'doctor-patient-record-time' 'registry-doctor-record-time'}}
+{{#ifpage 'personal-record-time' 'doctor-record-time' 'cashier-record-time' 'doctor-patient-record-time' 'registry-doctor-record-time' 'superadmin-record-time'}}
 <!--Выбертие время-->
 {{#unlesspage 'doctor-record-time' 'registry-doctor-record-time'}}
 <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-20 sText-transform-none">Запись к врачу</h2>
@@ -196,7 +194,7 @@
 <div class="table table--hover table--outline table--v2">
 {{/ifpage}}
 
-{{#ifpage 'doctor-record-time' 'registry-doctor-record-time'}}
+{{#ifpage 'doctor-record-time' 'registry-doctor-record-time' 'superadmin-record-time'}}
 <div class="table table--even table--hover table--outline table--v2">
 {{/ifpage}}
 
@@ -226,7 +224,7 @@
     {{/repeat}}
     {{/ifpage}}
 
-    {{#ifpage 'doctor-record-time' 'registry-doctor-record-time'}}
+    {{#ifpage 'doctor-record-time' 'registry-doctor-record-time' 'superadmin-record-time'}}
     {{#repeat 2}}
     <a class="table__row" href="">
       <span class="table__col">12:20</span>
@@ -251,7 +249,7 @@
 
 
 
-  {{#ifpage 'personal-record-confirm' 'doctor-record-confirm' 'cashier-record-confirm' 'doctor-patient-record-confirm' 'registry-doctor-record-confirm'}}
+  {{#ifpage 'personal-record-confirm' 'doctor-record-confirm' 'cashier-record-confirm' 'doctor-patient-record-confirm' 'registry-doctor-record-confirm' 'superadmin-record-confirm'}}
   <!--Подтвердить запись к врачу-->
   {{#unlesspage 'doctor-record-confirm' 'registry-doctor-record-confirm'}}
   <h2 class="content__title title sFw-500 sFz-18 sFz-lg-20 sMb-20 sText-transform-none">Запись к врачу</h2>
@@ -276,7 +274,7 @@
       </div>
       {{/ifpage}}
 
-      {{#ifpage 'cashier-record-confirm' 'doctor-patient-record-confirm'}}
+      {{#ifpage 'cashier-record-confirm' 'doctor-patient-record-confirm' 'superadmin-record-confirm'}}
       <div class="sForm__item record-input">
         <span class="sForm__label">Пациент:</span>
         <input type="text" name="patient" value="Иванов Иван Иванович">
@@ -351,6 +349,24 @@
       <div class="sForm__item">
         <span class="sForm__label sForm__label---status">Статус оплаты: <span class="status status-success">Оплачен</span></span>
         <input type="hidden" name="status_payment" value="cash">
+      </div>
+
+      <div class="sForm__item record-input record-input---personal">
+        <input type="checkbox" name="agreement" id="agreement">
+        <label for="agreement" class="sForm__label">Даю согласие на обработку персональных данных</label>
+      </div>
+
+      <div class="sForm__item record-input record-input---personal">
+        <input type="checkbox" name="offer" id="offer">
+        <label for="offer" class="sForm__label">Ознакомлен с <a class="record-input__link" href=""> договором оферты </a>
+          и <a class="record-input__link" href=""> правилами предоставления услуг </a></label>
+      </div>
+      {{/ifpage}}
+
+      {{#ifpage 'superadmin-record-confirm'}}
+      <div class="sForm__item">
+        <span class="sForm__label">Способ оплаты: Наличные</span>
+        <input type="hidden" name="type_payment" value="cash">
       </div>
 
       <div class="sForm__item record-input record-input---personal">
